@@ -15,7 +15,7 @@ Each specific class has it's own nested .js file that may add specific functiona
 All the premium extensions are open projects, meaning that we will keep adding, fixing, changing, and expanding them according to the requirements of our Technology Partners and needs we find on our projects using these extensions.
 
 ## License
-To use this extension you need to acquire at least a **JavaScript Bundle** license from Infragistics: https://www.telerik.com/purchase/kendo-ui.
+To use this extension you need to acquire at least a **JavaScript Bundle** license from Telerik: https://www.telerik.com/purchase/kendo-ui.
 
 ## Demo
 Coming soon...
