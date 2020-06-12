@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FF3C12A-9A39-4CE8-9F94-8176F8F7837F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wisej.Web.Ext.Kendo</RootNamespace>
+    <AssemblyName>Wisej.Web.Ext.Kendo</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wisej.Framework">
+      <HintPath>..\..\..\..\..\Development\2.1\bin\Wisej.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="kendoBarcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoFileManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoLinearGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoQRCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoSparkline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoStockChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoTreeMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoChat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoPivotGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoSpreadsheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoTreeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoDiagram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoRadialGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoRating.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="kendoDateRangePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoDropDownList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoDropDownTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoMultiColumnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoMultiSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoRangeSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoAutoComplete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoArcGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoMediaPlayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoScrollView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoBreadcrumb.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoDrawer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoPanelBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoStepper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoTimeline.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoPDFViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoGantt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoMultiViewCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="kendoScheduler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="kendoArcGauge.js">
+      <DependentUpon>kendoArcGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoAutoComplete.js">
+      <DependentUpon>kendoAutoComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoBreadcrumb.js">
+      <DependentUpon>kendoBreadcrumb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoCalendar.js">
+      <DependentUpon>kendoCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoChart.js">
+      <DependentUpon>kendoChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoChat.js">
+      <DependentUpon>kendoChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoDateTimePicker.js">
+      <DependentUpon>kendoDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoDiagram.js">
+      <DependentUpon>kendoDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoDrawer.js">
+      <DependentUpon>kendoDrawer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoDropDownList.js">
+      <DependentUpon>kendoDropDownList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoDropDownTree.js">
+      <DependentUpon>kendoDropDownTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoGantt.js">
+      <DependentUpon>kendoGantt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoGrid.js">
+      <DependentUpon>kendoGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoListBox.js">
+      <DependentUpon>kendoListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoListView.js">
+      <DependentUpon>kendoListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoMap.js">
+      <DependentUpon>kendoMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoMediaPlayer.js">
+      <DependentUpon>kendoMediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoMenu.js">
+      <DependentUpon>kendoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoMultiColumnComboBox.js">
+      <DependentUpon>kendoMultiColumnComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoMultiSelect.js">
+      <DependentUpon>kendoMultiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoMultiViewCalendar.js">
+      <DependentUpon>kendoMultiViewCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoPanelBar.js">
+      <DependentUpon>kendoPanelBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoPDFViewer.js">
+      <DependentUpon>kendoPDFViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoPivotGrid.js">
+      <DependentUpon>kendoPivotGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoRangeSlider.js">
+      <DependentUpon>kendoRangeSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoScheduler.js">
+      <DependentUpon>kendoScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoScrollView.js">
+      <DependentUpon>kendoScrollView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoSlider.js">
+      <DependentUpon>kendoSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoSparkline.js">
+      <DependentUpon>kendoSparkline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoSpreadsheet.js">
+      <DependentUpon>kendoSpreadsheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoStepper.js">
+      <DependentUpon>kendoStepper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoStockChart.js">
+      <DependentUpon>kendoStockChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoSwitch.js">
+      <DependentUpon>kendoSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoTimeline.js">
+      <DependentUpon>kendoTimeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoTimePicker.js">
+      <DependentUpon>kendoTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoTreeList.js">
+      <DependentUpon>kendoTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoTreeMap.js">
+      <DependentUpon>kendoTreeMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoTreeView.js">
+      <DependentUpon>kendoTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kendo\js\jquery.min.js" />
+    <EmbeddedResource Include="Kendo\js\kendo.all.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Kendo\styles\Black\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Black\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Black\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Black\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Black\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Black\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Black\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Black\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\BlueOpal\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Bootstrap\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Default\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Default\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Default\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Default\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Default\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Default\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Default\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Fiori\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Flat\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Flat\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Flat\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Flat\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Flat\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Flat\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Flat\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\HighContrast\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\images\back.png" />
+    <EmbeddedResource Include="Kendo\styles\images\kendoui.svg" />
+    <EmbeddedResource Include="Kendo\styles\images\wp8_icons.png" />
+    <EmbeddedResource Include="Kendo\styles\images\wp8_inverseicons.png" />
+    <EmbeddedResource Include="Kendo\styles\kendo.black.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.black.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.blueopal.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.blueopal.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.bootstrap-v4.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.bootstrap.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.bootstrap.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.common-bootstrap.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.common-fiori.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.common-material.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.common-nova.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.common-office365.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.common.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.black.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.blueopal.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.bootstrap.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.default.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.fiori.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.flat.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.highcontrast.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.material.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.materialblack.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.metro.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.metroblack.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.moonlight.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.nova.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.office365.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.silver.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.dataviz.uniform.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.default-v2.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.default.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.default.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.fiori.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.fiori.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.flat.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.flat.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.highcontrast.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.highcontrast.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.material-v2.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.material.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.material.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.materialblack.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.materialblack.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.metro.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.metro.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.metroblack.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.metroblack.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.all.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.android.dark.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.android.light.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.blackberry.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.common.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.fiori.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.flat.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.ios.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.material.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.meego.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.nova.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.office365.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.mobile.wp8.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.moonlight.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.moonlight.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.nova.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.nova.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.office365.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.office365.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.rtl.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.silver.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.silver.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.uniform.min.css" />
+    <EmbeddedResource Include="Kendo\styles\kendo.uniform.mobile.min.css" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\MaterialBlack\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Material\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Material\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Material\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Material\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Material\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Material\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Material\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\MetroBlack\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Metro\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Metro\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Metro\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Metro\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Metro\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Metro\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Metro\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Moonlight\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Nova\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Nova\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Nova\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Nova\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Nova\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Nova\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Nova\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Office365\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Office365\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Office365\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Office365\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Office365\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Office365\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Office365\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Silver\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Silver\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Silver\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Silver\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Silver\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Silver\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Silver\sprite_kpi_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\brushed-metal.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots1.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots10.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots11.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots12.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots13.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots2.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots3.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots4.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots5.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots6.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots7.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots8.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\dots9.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\glass-lighter.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\glass.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\highlight.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\hsv-gradient.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\hue.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\image-default.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\leather1.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\leather2.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\noise.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\stripe1.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\stripe2.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\stripe3.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\stripe4.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\stripe5.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\stripe6.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\transparency-reversed.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\transparency.png" />
+    <EmbeddedResource Include="Kendo\styles\textures\transtexture.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\editor.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\imagebrowser.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\indeterminate.gif" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\loading-image.gif" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\loading.gif" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\loading_2x.gif" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\markers.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\markers_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\slider-h.gif" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\slider-v.gif" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\sprite.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\sprite_2x.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\sprite_kpi.png" />
+    <EmbeddedResource Include="Kendo\styles\Uniform\sprite_kpi_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Kendo\styles\images\kendoui.ttf" />
+    <EmbeddedResource Include="Kendo\styles\images\kendoui.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Platform\wisej.web.ext.KendoWidget.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="kendoDatePicker.js">
+      <DependentUpon>kendoDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoDateRangePicker.js">
+      <DependentUpon>kendoDateRangePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoFileManager.js">
+      <DependentUpon>kendoFileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoLinearGauge.js">
+      <DependentUpon>kendoLinearGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoRadialGauge.js">
+      <DependentUpon>kendoRadialGauge.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Kendo\pdfjs\pdf.js" />
+    <EmbeddedResource Include="kendoBarcode.js">
+      <DependentUpon>kendoBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kendoQRCode.js">
+      <DependentUpon>kendoQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="kendoRating.js">
+      <DependentUpon>kendoRating.cs</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Kendo\pdfjs\pdf.worker.js" />
+    <EmbeddedResource Include="Kendo\js\jszip.min.js" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\KendoUIGlyphs.svg" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSans-Oblique.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSans.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSansMono-Bold.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSansMono-BoldOblique.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSansMono-Oblique.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSansMono.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSerif-Bold.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSerif-BoldItalic.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSerif-Italic.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\DejaVu\DejaVuSerif.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\KendoUIGlyphs.eot" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\KendoUIGlyphs.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\KendoUIGlyphs.woff" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.eot" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.ttf" />
+    <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.woff" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

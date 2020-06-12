@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wisej.Web.Ext.Kendo.Test</RootNamespace>
+    <AssemblyName>Wisej.Web.Ext.Kendo.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <ProjectGuid>{8C552CA9-4468-491A-AB7E-0B2BF8711536}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Default.html" />
+    <Content Include="Default.json" />
+    <Content Include="favicon.ico" />
+    <Content Include="Data\Gantt\tasks.json" />
+    <Content Include="Data\Gantt\dependencies.json" />
+    <Content Include="Data\PDFViewer\wisej.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Chat\ANATR.jpg" />
+    <Content Include="Images\Chat\ANTON.jpg" />
+    <Content Include="Images\Grid\ALFKI.jpg" />
+    <Content Include="Images\Grid\ANATR.jpg" />
+    <Content Include="Images\Grid\ANTON.jpg" />
+    <Content Include="Images\Grid\AROUT.jpg" />
+    <Content Include="Images\Grid\BERGS.jpg" />
+    <Content Include="Images\Grid\BLAUS.jpg" />
+    <Content Include="Images\Grid\BLONP.jpg" />
+    <Content Include="Images\Grid\BOLID.jpg" />
+    <Content Include="Images\Grid\BONAP.jpg" />
+    <Content Include="Images\Grid\BOTTM.jpg" />
+    <Content Include="Images\Grid\BSBEV.jpg" />
+    <Content Include="Images\Grid\CACTU.jpg" />
+    <Content Include="Images\Grid\CENTC.jpg" />
+    <Content Include="Images\Grid\CHOPS.jpg" />
+    <Content Include="Images\Grid\COMMI.jpg" />
+    <Content Include="Images\Grid\CONSH.jpg" />
+    <Content Include="Images\Grid\DRACD.jpg" />
+    <Content Include="Images\Grid\DUMON.jpg" />
+    <Content Include="Images\Grid\EASTC.jpg" />
+    <Content Include="Images\Grid\ERNSH.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component\kendoArcGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoArcGauge.Designer.cs">
+      <DependentUpon>kendoArcGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoAutoComplete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoAutoComplete.Designer.cs">
+      <DependentUpon>kendoAutoComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoBarcode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoBarcode.Designer.cs">
+      <DependentUpon>kendoBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoBreadcrumb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoBreadcrumb.Designer.cs">
+      <DependentUpon>kendoBreadcrumb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoCalendar.Designer.cs">
+      <DependentUpon>kendoCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoChart.Designer.cs">
+      <DependentUpon>kendoChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoChat.Designer.cs">
+      <DependentUpon>kendoChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDatePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDatePicker.Designer.cs">
+      <DependentUpon>kendoDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDateRangePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDateRangePicker.Designer.cs">
+      <DependentUpon>kendoDateRangePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDateTimePicker.Designer.cs">
+      <DependentUpon>kendoDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDiagram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDiagram.Designer.cs">
+      <DependentUpon>kendoDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDrawer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDrawer.Designer.cs">
+      <DependentUpon>kendoDrawer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDropDownList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDropDownList.Designer.cs">
+      <DependentUpon>kendoDropDownList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoDropDownTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoDropDownTree.Designer.cs">
+      <DependentUpon>kendoDropDownTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoFileManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoFileManager.Designer.cs">
+      <DependentUpon>kendoFileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoGantt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoGantt.Designer.cs">
+      <DependentUpon>kendoGantt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoGrid.Designer.cs">
+      <DependentUpon>kendoGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoLinearGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoLinearGauge.Designer.cs">
+      <DependentUpon>kendoLinearGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoListBox.Designer.cs">
+      <DependentUpon>kendoListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoListView.Designer.cs">
+      <DependentUpon>kendoListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoMap.Designer.cs">
+      <DependentUpon>kendoMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoMediaPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoMediaPlayer.Designer.cs">
+      <DependentUpon>kendoMediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoMenu.Designer.cs">
+      <DependentUpon>kendoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoMultiColumnComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoMultiColumnComboBox.Designer.cs">
+      <DependentUpon>kendoMultiColumnComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoMultiSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoMultiSelect.Designer.cs">
+      <DependentUpon>kendoMultiSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoMultiViewCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoMultiViewCalendar.Designer.cs">
+      <DependentUpon>kendoMultiViewCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoPanelBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoPanelBar.Designer.cs">
+      <DependentUpon>kendoPanelBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoPDFViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoPDFViewer.Designer.cs">
+      <DependentUpon>kendoPDFViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoPivotGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoPivotGrid.Designer.cs">
+      <DependentUpon>kendoPivotGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoQRCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoQRCode.Designer.cs">
+      <DependentUpon>kendoQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoRadialGauge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoRadialGauge.Designer.cs">
+      <DependentUpon>kendoRadialGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoRating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoRating.Designer.cs">
+      <DependentUpon>kendoRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoScheduler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoScheduler.Designer.cs">
+      <DependentUpon>kendoScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoScrollView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoScrollView.Designer.cs">
+      <DependentUpon>kendoScrollView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoSlider.Designer.cs">
+      <DependentUpon>kendoSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoSparkline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoSparkline.Designer.cs">
+      <DependentUpon>kendoSparkline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoSpreadsheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoSpreadsheet.Designer.cs">
+      <DependentUpon>kendoSpreadsheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoStepper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoStepper.Designer.cs">
+      <DependentUpon>kendoStepper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoStockChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoStockChart.Designer.cs">
+      <DependentUpon>kendoStockChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoTimeline.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoTimeline.Designer.cs">
+      <DependentUpon>kendoTimeline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoTimePicker.Designer.cs">
+      <DependentUpon>kendoTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoTreeList.Designer.cs">
+      <DependentUpon>kendoTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoTreeMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoTreeMap.Designer.cs">
+      <DependentUpon>kendoTreeMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\kendoTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\kendoTreeView.Designer.cs">
+      <DependentUpon>kendoTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TestBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\TestBase.Designer.cs">
+      <DependentUpon>TestBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Wisej.Ext.MaterialDesign">
+      <HintPath>..\..\..\..\2.1\bin\Wisej.Ext.MaterialDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=17bef35e11b84171, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Development\2.1\bin\Wisej.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisej.Web.Ext.Kendo">
+      <HintPath>..\Wisej.Web.Ext.Kendo\bin\Debug\Wisej.Web.Ext.Kendo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Component\kendoArcGauge.resx">
+      <DependentUpon>kendoArcGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoAutoComplete.resx">
+      <DependentUpon>kendoAutoComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoBarcode.resx">
+      <DependentUpon>kendoBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoBreadcrumb.resx">
+      <DependentUpon>kendoBreadcrumb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoCalendar.resx">
+      <DependentUpon>kendoCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoChart.resx">
+      <DependentUpon>kendoChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoChat.resx">
+      <DependentUpon>kendoChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDatePicker.resx">
+      <DependentUpon>kendoDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDateRangePicker.resx">
+      <DependentUpon>kendoDateRangePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDateTimePicker.resx">
+      <DependentUpon>kendoDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDiagram.resx">
+      <DependentUpon>kendoDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDrawer.resx">
+      <DependentUpon>kendoDrawer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDropDownList.resx">
+      <DependentUpon>kendoDropDownList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoDropDownTree.resx">
+      <DependentUpon>kendoDropDownTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoFileManager.resx">
+      <DependentUpon>kendoFileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoGantt.resx">
+      <DependentUpon>kendoGantt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoGrid.resx">
+      <DependentUpon>kendoGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoLinearGauge.resx">
+      <DependentUpon>kendoLinearGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoListBox.resx">
+      <DependentUpon>kendoListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoListView.resx">
+      <DependentUpon>kendoListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoMap.resx">
+      <DependentUpon>kendoMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoMediaPlayer.resx">
+      <DependentUpon>kendoMediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoMenu.resx">
+      <DependentUpon>kendoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoMultiColumnComboBox.resx">
+      <DependentUpon>kendoMultiColumnComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoMultiSelect.resx">
+      <DependentUpon>kendoMultiSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoMultiViewCalendar.resx">
+      <DependentUpon>kendoMultiViewCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoPanelBar.resx">
+      <DependentUpon>kendoPanelBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoPDFViewer.resx">
+      <DependentUpon>kendoPDFViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoPivotGrid.resx">
+      <DependentUpon>kendoPivotGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoQRCode.resx">
+      <DependentUpon>kendoQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoRadialGauge.resx">
+      <DependentUpon>kendoRadialGauge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoRating.resx">
+      <DependentUpon>kendoRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoScheduler.resx">
+      <DependentUpon>kendoScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoScrollView.resx">
+      <DependentUpon>kendoScrollView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoSlider.resx">
+      <DependentUpon>kendoSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoSparkline.resx">
+      <DependentUpon>kendoSparkline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoSpreadsheet.resx">
+      <DependentUpon>kendoSpreadsheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoStepper.resx">
+      <DependentUpon>kendoStepper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoStockChart.resx">
+      <DependentUpon>kendoStockChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoTimeline.resx">
+      <DependentUpon>kendoTimeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoTimePicker.resx">
+      <DependentUpon>kendoTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoTreeList.resx">
+      <DependentUpon>kendoTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoTreeMap.resx">
+      <DependentUpon>kendoTreeMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\kendoTreeView.resx">
+      <DependentUpon>kendoTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\TestBase.resx">
+      <DependentUpon>TestBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63733/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
