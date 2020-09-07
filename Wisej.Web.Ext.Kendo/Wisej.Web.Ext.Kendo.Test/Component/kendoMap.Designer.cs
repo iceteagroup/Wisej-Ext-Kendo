@@ -29,13 +29,13 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kendoMap));
-			this.kendoMap1 = new Wisej.Web.Ext.Kendo.kendoMap();
 			this.checkBox1 = new Wisej.Web.CheckBox();
 			this.checkBox2 = new Wisej.Web.CheckBox();
 			this.checkBox3 = new Wisej.Web.CheckBox();
 			this.numericUpDown1 = new Wisej.Web.NumericUpDown();
 			this.numericUpDown2 = new Wisej.Web.NumericUpDown();
 			this.numericUpDown3 = new Wisej.Web.NumericUpDown();
+			this.kendoMap1 = new Wisej.Web.Ext.Kendo.kendoMap();
 			this.panel.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -81,18 +81,6 @@
 			// linkDocs
 			// 
 			this.linkDocs.Text = "https://docs.telerik.com/kendo-ui/controls/diagrams-and-maps/map/overview";
-			// 
-			// kendoMap1
-			// 
-			this.kendoMap1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
-            | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
-			this.kendoMap1.Location = new System.Drawing.Point(23, 27);
-			this.kendoMap1.Name = "kendoMap1";
-			this.kendoMap1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoMap1.Options"))));
-			this.kendoMap1.Size = new System.Drawing.Size(406, 458);
-			this.kendoMap1.TabIndex = 0;
-			this.kendoMap1.Text = "kendoMap1";
 			// 
 			// checkBox1
 			// 
@@ -210,6 +198,18 @@
             0,
             0,
             0});
+			// 
+			// kendoMap1
+			// 
+			this.kendoMap1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
+            | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+			this.kendoMap1.Location = new System.Drawing.Point(23, 27);
+			this.kendoMap1.Name = "kendoMap1";
+			this.kendoMap1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoMap1.Options"))));
+			this.kendoMap1.Size = new System.Drawing.Size(406, 458);
+			this.kendoMap1.TabIndex = 0;
+			this.kendoMap1.Text = "kendoMap1";
 			// 
 			// kendoMap
 			// 

@@ -38,7 +38,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoBreadcrumb(object options) : base("kendoBreadcrumb", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"click",
 				"change"
 			};

@@ -32,6 +32,7 @@
 			this.kendoBreadcrumb1 = new Wisej.Web.Ext.Kendo.kendoBreadcrumb();
 			this.checkBox1 = new Wisej.Web.CheckBox();
 			this.numericUpDown1 = new Wisej.Web.NumericUpDown();
+			this.checkBox2 = new Wisej.Web.CheckBox();
 			this.panel.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -43,11 +44,13 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.checkBox2);
 			this.groupBox1.Controls.Add(this.numericUpDown1);
 			this.groupBox1.Controls.Add(this.checkBox1);
 			this.groupBox1.Controls.SetChildIndex(this.buttonUpdate, 0);
 			this.groupBox1.Controls.SetChildIndex(this.checkBox1, 0);
 			this.groupBox1.Controls.SetChildIndex(this.numericUpDown1, 0);
+			this.groupBox1.Controls.SetChildIndex(this.checkBox2, 0);
 			// 
 			// buttonUpdate
 			// 
@@ -67,10 +70,11 @@
 			// 
 			// kendoBreadcrumb1
 			// 
-			this.kendoBreadcrumb1.Location = new System.Drawing.Point(100, 141);
+			this.kendoBreadcrumb1.Anchor = ((Wisej.Web.AnchorStyles)((Wisej.Web.AnchorStyles.Left | Wisej.Web.AnchorStyles.Right)));
+			this.kendoBreadcrumb1.Location = new System.Drawing.Point(49, 141);
 			this.kendoBreadcrumb1.Name = "kendoBreadcrumb1";
 			this.kendoBreadcrumb1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoBreadcrumb1.Options"))));
-			this.kendoBreadcrumb1.Size = new System.Drawing.Size(253, 30);
+			this.kendoBreadcrumb1.Size = new System.Drawing.Size(354, 30);
 			this.kendoBreadcrumb1.TabIndex = 0;
 			this.kendoBreadcrumb1.Text = "kendoBreadcrumb1";
 			// 
@@ -96,7 +100,7 @@
 			this.numericUpDown1.Label.Size = 50;
 			this.numericUpDown1.Label.SizeType = Wisej.Web.SizeType.Percent;
 			this.numericUpDown1.LabelText = "Gap";
-			this.numericUpDown1.Location = new System.Drawing.Point(28, 112);
+			this.numericUpDown1.Location = new System.Drawing.Point(28, 155);
 			this.numericUpDown1.Maximum = new decimal(new int[] {
             500,
             0,
@@ -105,6 +109,17 @@
 			this.numericUpDown1.Name = "numericUpDown1";
 			this.numericUpDown1.Size = new System.Drawing.Size(195, 60);
 			this.numericUpDown1.TabIndex = 3;
+			// 
+			// checkBox2
+			// 
+			this.checkBox2.Appearance = Wisej.Web.Appearance.Switch;
+			this.checkBox2.AutoSize = false;
+			this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.checkBox2.Location = new System.Drawing.Point(28, 68);
+			this.checkBox2.Name = "checkBox2";
+			this.checkBox2.Size = new System.Drawing.Size(195, 38);
+			this.checkBox2.TabIndex = 4;
+			this.checkBox2.Text = "Navigational";
 			// 
 			// kendoBreadcrumb
 			// 
@@ -122,5 +137,6 @@
 		private Kendo.kendoBreadcrumb kendoBreadcrumb1;
 		private CheckBox checkBox1;
 		private NumericUpDown numericUpDown1;
+		private CheckBox checkBox2;
 	}
 }

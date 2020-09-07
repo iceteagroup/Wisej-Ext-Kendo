@@ -27,7 +27,7 @@ this.filterOptions = function (options) {
 
 	if (!options.pdf) {
 
-		var serviceUrl = this.getPostbackUrl();
+		var serviceUrl = this.getServiceUrl();
 		options.pdf = {
 			proxyURL: serviceUrl + "?action=export",
 			forceProxy: true

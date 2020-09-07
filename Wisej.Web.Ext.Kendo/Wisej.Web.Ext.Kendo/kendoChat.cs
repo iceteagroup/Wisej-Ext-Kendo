@@ -37,7 +37,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoChat(object options) : base("kendoChat", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"actionClick",
 				"post",
 				"sendMessage",

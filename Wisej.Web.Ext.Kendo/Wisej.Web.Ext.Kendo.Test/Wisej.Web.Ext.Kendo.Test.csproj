@@ -371,15 +371,17 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="Wisej.Ext.MaterialDesign">
-      <HintPath>..\..\..\..\2.1\bin\Wisej.Ext.MaterialDesign.dll</HintPath>
+    <Reference Include="Wisej.Ext.MaterialDesign, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\2.2\bin\Wisej.Ext.MaterialDesign.dll</HintPath>
     </Reference>
     <Reference Include="Wisej.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=17bef35e11b84171, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Development\2.1\bin\Wisej.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\Development\2.2\bin\Wisej.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Wisej.Web.Ext.Kendo">
-      <HintPath>..\Wisej.Web.Ext.Kendo\bin\Debug\Wisej.Web.Ext.Kendo.dll</HintPath>
+    <Reference Include="Wisej.Web.Ext.Kendo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Wisej.Web.Ext.Kendo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

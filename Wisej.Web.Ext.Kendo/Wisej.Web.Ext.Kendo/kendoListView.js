@@ -24,4 +24,4 @@
  * @param {any} options
  */
 this.filterOptions = function (options) {
-}
+};

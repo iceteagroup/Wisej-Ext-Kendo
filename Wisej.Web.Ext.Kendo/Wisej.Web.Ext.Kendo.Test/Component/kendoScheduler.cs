@@ -12,8 +12,8 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoScheduler1.Widget.add += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
-			this.kendoScheduler1.Widget.change += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
+			this.kendoScheduler1.Instance.add += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
+			this.kendoScheduler1.Instance.change += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
 		}
 
 		private void kendoScheduler1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -27,7 +27,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private void buttonExport_Click(object sender, EventArgs e)
 		{
-			this.kendoScheduler1.Widget.saveAsPDF();
+			this.kendoScheduler1.Instance.saveAsPDF();
 		}
 
 		private void kendoScheduler1_WebRequest(object sender, WebRequestEventArgs e)

@@ -14,7 +14,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
 			this.kendoArcGauge1.Options.color = this.textBox1.Text;
-			this.kendoArcGauge1.Widget.value(this.numericUpDown1.Value);
+			this.kendoArcGauge1.Instance.value(this.numericUpDown1.Value);
 			this.kendoArcGauge1.Options.opacity = this.numericUpDown2.Value;
 			this.kendoArcGauge1.Options.transitions = this.checkBox1.Checked;
 
@@ -37,7 +37,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 				for (var i = 0; i < 10; i++)
 				{
-					this.kendoArcGauge1.Widget.value(rand.Next(0, 100));
+					this.kendoArcGauge1.Instance.value(rand.Next(0, 100));
 					Application.Update(this);
 					Thread.Sleep(1000);
 				}

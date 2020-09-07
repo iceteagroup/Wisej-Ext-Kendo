@@ -9,8 +9,8 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoListBox1.Widget.add += new WidgetEventHandler(kendoListBox1_WidgetEvent);
-			this.kendoListBox1.Widget.change += new WidgetEventHandler(kendoListBox1_WidgetEvent);
+			this.kendoListBox1.Instance.add += new WidgetEventHandler(kendoListBox1_WidgetEvent);
+			this.kendoListBox1.Instance.change += new WidgetEventHandler(kendoListBox1_WidgetEvent);
 		}
 
 		private void kendoListBox1_WidgetEvent(object sender, WidgetEventArgs e)

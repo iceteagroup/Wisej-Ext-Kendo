@@ -118,13 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="kendoChart1.Options" xml:space="preserve">
-    <value>{"title":{"text":"Site Visitors Stats \n /thousands/"},"legend":{"visible":false},"seriesDefaults":{"type":"bar"},"series":[{"name":"Total Visits","data":[56000,63000,74000,91000,117000,138000]},{"name":"Unique visitors","data":[52000,34000,23000,48000,67000,83000]}],"valueAxis":{"max":140000,"line":{"visible":false},"minorGridLines":{"visible":true},"labels":{"rotation":"auto"}},"categoryAxis":{"categories":["Jan","Feb","Mar","Apr","May","Jun"],"majorGridLines":{"visible":false}},"tooltip":{"visible":true,"template":"#= series.name #: #= value #"}}</value>
+    <value>{"title":{"text":"Site Visitors Stats \n /thousands/"},"legend":{"visible":false},"seriesDefaults":{"type":"bar"},"series":[{"name":"Total Visits","data":[56000,63000,74000,91000,117000,138000]},{"name":"Unique visitors","data":[52000,34000,23000,48000,67000,83000]}],"valueAxis":{"max":140000,"line":{"visible":false},"minorGridLines":{"visible":true},"labels":{"rotation":"auto"}},"categoryAxis":{"labels":{"visible":true},"categories":["Jan","Feb","Mar","Apr","May","Jun"],"majorGridLines":{"visible":false}},"tooltip":{"visible":true,"template":"#= series.name #: #= value #"}}</value>
   </data>
   <metadata name="$this.RulerSnapLines" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EHAQAAAAABAAAAAAAAAAQU
-        U3lzdGVtLkRyYXdpbmcuUG9pbnQCAAAACw==
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EHAQAAAAABAAAAAQAAAAQU
+        U3lzdGVtLkRyYXdpbmcuUG9pbnQCAAAABf3///8UU3lzdGVtLkRyYXdpbmcuUG9pbnQCAAAAAXgBeQAA
+        CAgCAAAAAAAAANQAAAAL
 </value>
   </metadata>
 </root>

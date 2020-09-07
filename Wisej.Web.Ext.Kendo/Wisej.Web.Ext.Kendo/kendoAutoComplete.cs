@@ -37,7 +37,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoAutoComplete(object options) : base("kendoAutoComplete", "<input style='width:100%;height:100%;box-sizing:border-box;'>", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"change",
 				"close",
 				"dataBound",

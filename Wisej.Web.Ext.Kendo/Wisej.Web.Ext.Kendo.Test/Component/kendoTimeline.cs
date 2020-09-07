@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoTimeline1.Widget.change += new WidgetEventHandler(kendoTimeline1_WidgetEvent);
+			this.kendoTimeline1.Instance.change += new WidgetEventHandler(kendoTimeline1_WidgetEvent);
 		}
 
 		private void kendoTimeline1_WidgetEvent(object sender, WidgetEventArgs e)

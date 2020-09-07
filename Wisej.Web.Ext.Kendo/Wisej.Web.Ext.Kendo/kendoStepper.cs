@@ -38,7 +38,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoStepper(object options) : base("kendoStepper", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"activate",
 				"select"
 			};

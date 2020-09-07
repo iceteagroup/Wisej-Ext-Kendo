@@ -9,8 +9,8 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoAutoComplete1.Widget.change += new WidgetEventHandler(kendoAutoComplete1_WidgetEvent);
-			this.kendoAutoComplete1.Widget.select += new WidgetEventHandler(kendoAutoComplete1_WidgetEvent);
+			this.kendoAutoComplete1.Instance.change += new WidgetEventHandler(kendoAutoComplete1_WidgetEvent);
+			this.kendoAutoComplete1.Instance.select += new WidgetEventHandler(kendoAutoComplete1_WidgetEvent);
 		}
 
 		private void kendoAutoComplete1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -45,6 +45,11 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			{
 				this.kendoAutoComplete1.Options.animation = false;
 			}
+			this.kendoAutoComplete1.Options.clearButton = this.checkBox2.Checked;
+			this.kendoAutoComplete1.Options.highlightFirst = this.checkBox3.Checked;
+			this.kendoAutoComplete1.Options.ignoreCase = this.checkBox4.Checked;
+			this.kendoAutoComplete1.Options.suggest = this.checkBox5.Checked;
+			this.kendoAutoComplete1.Options.delay = this.numericUpDown1.Value;
 
 			this.kendoAutoComplete1.Update();
 		}

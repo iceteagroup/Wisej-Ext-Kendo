@@ -38,7 +38,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoDrawer(object options) : base("kendoDrawer", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"hide",
 				"show",
 				"itemClick"

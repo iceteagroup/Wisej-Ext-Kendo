@@ -11,7 +11,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoPivotGrid1.Widget.expandMember += new WidgetEventHandler(kendoPivotGrid1_WidgetEvent);
+			this.kendoPivotGrid1.Instance.expandMember += new WidgetEventHandler(kendoPivotGrid1_WidgetEvent);
 		}
 
 		private void kendoPivotGrid1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -25,7 +25,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private void buttonExport_Click(object sender, EventArgs e)
 		{
-			this.kendoPivotGrid1.Widget.saveAsExcel();
+			this.kendoPivotGrid1.Instance.saveAsExcel();
 		}
 
 		private void kendoPivotGrid1_WebRequest(object sender, WebRequestEventArgs e)
@@ -54,7 +54,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private void buttonPDF_Click(object sender, EventArgs e)
 		{
-			this.kendoPivotGrid1.Widget.saveAsPDF();
+			this.kendoPivotGrid1.Instance.saveAsPDF();
 		}
 	}
 }

@@ -44,7 +44,7 @@ namespace Wisej.Web.Ext.Kendo
 				Source = this.GetResourceURL($"{RESOURCES_ROOT}/pdfjs/pdf.js")
 			});
 
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"open",
 				"error"
 			};

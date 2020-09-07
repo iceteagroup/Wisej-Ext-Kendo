@@ -27,7 +27,7 @@ this.filterOptions = function (options) {
 
 	if (!options.pdf) {
 
-		var serviceUrl = this.getPostbackUrl();
+		var serviceUrl = this.getServiceUrl();
 		options.pdf = {
 			proxyURL: serviceUrl + "?action=export",
 			forceProxy: true
@@ -46,7 +46,7 @@ this.exportImageData = function (type) {
 		return;
 
 	var promise;
-	var serviceUrl = this.getPostbackUrl();
+	var serviceUrl = this.getServiceUrl();
 	switch (type.toLowerCase()) {
 
 		case "svg":
@@ -69,3 +69,52 @@ this.exportImageData = function (type) {
 		});
 	});
 }
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "axisLabelClick":
+			return {
+				index: args.index,
+				text: args.text,
+				value: args.value
+			};
+
+		case "legendItemClick":
+			return {
+				pointIndex: args.pointIndex,
+				seriesIndex: args.seriesIndex,
+				text: args.text
+			};
+
+		case "noteClick":
+			return {
+				value: args.value
+			};
+
+		case "plotAreaClick":
+			return {
+				value: args.value,
+				x: args.x,
+				y: args.y
+			};
+
+		case "select":
+			return {
+				from: args.from,
+				to: args.to
+			};
+
+		case "seriesClick":
+			return {
+				category: args.category,
+				percentage: args.percentage,
+				name: args.series.name,
+				value: args.value
+			};
+	}
+};

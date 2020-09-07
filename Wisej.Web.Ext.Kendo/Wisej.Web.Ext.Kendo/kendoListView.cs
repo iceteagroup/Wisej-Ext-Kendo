@@ -37,7 +37,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoListView(object options) : base("kendoListView", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"cancel",
 				"change",
 				"dataBound",

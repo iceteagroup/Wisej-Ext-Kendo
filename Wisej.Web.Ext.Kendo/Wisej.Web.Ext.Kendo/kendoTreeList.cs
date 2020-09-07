@@ -38,7 +38,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoTreeList(object options) : base("kendoTreeList", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"beforeEdit",
 				"cancel",
 				"cellClose",

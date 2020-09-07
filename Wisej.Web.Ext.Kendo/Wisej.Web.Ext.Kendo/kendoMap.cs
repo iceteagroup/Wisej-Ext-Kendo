@@ -38,7 +38,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoMap(object options) : base("kendoMap", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"beforeReset",
 				"click",
 				"markerActivate",

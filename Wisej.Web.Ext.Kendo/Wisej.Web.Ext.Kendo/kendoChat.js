@@ -20,7 +20,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * Filters the events for Wisej.
+ * Filters the event data for Wisej.
  **/
 this.filterEventData = function (args) {
 

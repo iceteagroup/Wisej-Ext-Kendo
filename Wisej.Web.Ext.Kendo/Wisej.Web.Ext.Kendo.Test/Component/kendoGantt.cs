@@ -12,8 +12,8 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoGantt1.Widget.add += new WidgetEventHandler(kendoGantt1_WidgetEvent);
-			this.kendoGantt1.Widget.change += new WidgetEventHandler(kendoGantt1_WidgetEvent);
+			this.kendoGantt1.Instance.add += new WidgetEventHandler(kendoGantt1_WidgetEvent);
+			this.kendoGantt1.Instance.change += new WidgetEventHandler(kendoGantt1_WidgetEvent);
 		}
 
 		private void kendoGantt1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -39,7 +39,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private void buttonPDF_Click(object sender, EventArgs e)
 		{
-			this.kendoGantt1.Widget.saveAsPDF();
+			this.kendoGantt1.Instance.saveAsPDF();
 		}
 
 		private void kendoGantt1_WebRequest(object sender, WebRequestEventArgs e)

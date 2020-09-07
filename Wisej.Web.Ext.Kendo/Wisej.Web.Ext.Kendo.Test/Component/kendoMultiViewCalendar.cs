@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoMultiViewCalendar1.Widget.change += new WidgetEventHandler(kendoMultiViewCalendar1_WidgetEvent);
+			this.kendoMultiViewCalendar1.Instance.change += new WidgetEventHandler(kendoMultiViewCalendar1_WidgetEvent);
 		}
 
 		private void kendoMultiViewCalendar1_WidgetEvent(object sender, WidgetEventArgs e)

@@ -19,3 +19,21 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "click":
+			return {
+				isRoot: args.isRoot,
+				item: args.item
+			};
+
+		case "change":
+			return args.value;
+
+	}
+};

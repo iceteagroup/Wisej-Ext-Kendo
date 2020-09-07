@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoDropDownTree1.Widget.change += new WidgetEventHandler(kendoDropDownTree1_WidgetEvent);
+			this.kendoDropDownTree1.Instance.change += new WidgetEventHandler(kendoDropDownTree1_WidgetEvent);
 		}
 
 		private void kendoDropDownTree1_WidgetEvent(object sender, WidgetEventArgs e)

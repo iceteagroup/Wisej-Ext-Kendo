@@ -37,7 +37,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// <param name="options">Initial set of options.</param>
 		public kendoPanelBar(object options) : base("kendoPanelBar", options)
 		{
-			this.WidgetWiredEvents = new[] {
+			this.WiredEvents = new[] {
 				"activate",
 				"collapse",
 				"contentLoad",

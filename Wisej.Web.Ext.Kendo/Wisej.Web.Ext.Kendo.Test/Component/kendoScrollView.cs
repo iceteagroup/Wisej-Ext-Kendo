@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoScrollView1.Widget.change += new WidgetEventHandler(kendoScrollView1_WidgetEvent);
+			this.kendoScrollView1.Instance.change += new WidgetEventHandler(kendoScrollView1_WidgetEvent);
 		}
 
 		private void kendoScrollView1_WidgetEvent(object sender, WidgetEventArgs e)

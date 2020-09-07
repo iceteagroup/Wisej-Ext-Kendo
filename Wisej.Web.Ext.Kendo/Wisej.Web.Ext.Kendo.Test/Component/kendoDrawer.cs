@@ -9,9 +9,9 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoDrawer1.Widget.hide += new WidgetEventHandler(kendoDrawer1_WidgetEvent);
-			this.kendoDrawer1.Widget.show += new WidgetEventHandler(kendoDrawer1_WidgetEvent);
-			this.kendoDrawer1.Widget.itemClick += new WidgetEventHandler(kendoDrawer1_WidgetEvent);
+			this.kendoDrawer1.Instance.hide += new WidgetEventHandler(kendoDrawer1_WidgetEvent);
+			this.kendoDrawer1.Instance.show += new WidgetEventHandler(kendoDrawer1_WidgetEvent);
+			this.kendoDrawer1.Instance.itemClick += new WidgetEventHandler(kendoDrawer1_WidgetEvent);
 		}
 
 		private void kendoDrawer1_WidgetEvent(object sender, WidgetEventArgs e)

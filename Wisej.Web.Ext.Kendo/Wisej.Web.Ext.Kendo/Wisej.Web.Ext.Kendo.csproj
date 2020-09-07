@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Wisej.Web.Ext.Kendo.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,14 +36,11 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Wisej.Framework">
-      <HintPath>..\..\..\..\..\Development\2.1\bin\Wisej.Framework.dll</HintPath>
+    <Reference Include="Wisej.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=17bef35e11b84171, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Development\2.2\bin\Wisej.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -703,5 +701,13 @@
     <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.ttf" />
     <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.woff" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Platform\wisej.web.ext.KendoWidget.css" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(ProjectDir)..\..\bin"
+copy "$(TargetPath)" "$(ProjectDir)..\..\bin\" /y
+copy "$(TargetDir)$(TargetName).xml" "$(ProjectDir)..\..\bin\" /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -39,10 +39,47 @@ this.filterOptions = function (options) {
 
 	if (!options.pdf) {
 
-		var serviceUrl = this.getPostbackUrl();
+		var serviceUrl = this.getServiceUrl();
 		options.pdf = {
 			proxyURL: serviceUrl + "?action=export",
 			forceProxy: true,
 		}
+	}
+}
+
+/**
+ * Filters the event data for Wisej.
+ * @param {any} args
+ */
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "save":
+			return {
+				values: args.values
+			};
+
+		case "columnResize":
+			return {
+				newWidth: args.newWidth,
+				oldWidth: args.oldWidth,
+			};
+
+		case "navigate":
+			return args.view;
+
+		case "move":
+			return {
+				start: args.start,
+				end: args.end
+			};
+
+		case "resize":
+			return {
+				start: args.start,
+				end: args.end
+			};
+
 	}
 }

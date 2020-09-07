@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoRating1.Widget.select += new WidgetEventHandler(kendoRating1_WidgetEvent);
+			this.kendoRating1.Instance.select += new WidgetEventHandler(kendoRating1_WidgetEvent);
 		}
 
 		private void kendoRating1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -23,7 +23,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
-			this.kendoRating1.Widget.value(this.numericUpDown1.Value);
+			this.kendoRating1.Instance.value(this.numericUpDown1.Value);
 			this.kendoRating1.Options.min = this.numericUpDown2.Value;
 			this.kendoRating1.Options.max = this.numericUpDown3.Value;
 			this.kendoRating1.Options.precision = this.comboBox1.SelectedItem;

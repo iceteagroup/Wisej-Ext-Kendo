@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoPanelBar1.Widget.select += new WidgetEventHandler(kendoPanelBar1_WidgetEvent);
+			this.kendoPanelBar1.Instance.select += new WidgetEventHandler(kendoPanelBar1_WidgetEvent);
 		}
 
 		private void kendoPanelBar1_WidgetEvent(object sender, WidgetEventArgs e)

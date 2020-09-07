@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kendoDropDownTree));
 			this.kendoDropDownTree1 = new Wisej.Web.Ext.Kendo.kendoDropDownTree();
 			this.panel.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -55,7 +56,8 @@
             | Wisej.Web.AnchorStyles.Right)));
 			this.kendoDropDownTree1.Location = new System.Drawing.Point(122, 84);
 			this.kendoDropDownTree1.Name = "kendoDropDownTree1";
-			this.kendoDropDownTree1.Size = new System.Drawing.Size(209, 145);
+			this.kendoDropDownTree1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoDropDownTree1.Options"))));
+			this.kendoDropDownTree1.Size = new System.Drawing.Size(209, 29);
 			this.kendoDropDownTree1.TabIndex = 0;
 			this.kendoDropDownTree1.Text = "kendoDropDownTree1";
 			// 

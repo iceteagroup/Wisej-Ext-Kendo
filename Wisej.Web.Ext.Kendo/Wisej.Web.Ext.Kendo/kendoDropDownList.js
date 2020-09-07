@@ -19,3 +19,19 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+/**
+ * Filters the event data for Wisej.
+ * @param {any} args
+ */
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "change":
+			return args.sender.value();
+
+		case "select":
+			return args.item.text();
+
+	}
+}

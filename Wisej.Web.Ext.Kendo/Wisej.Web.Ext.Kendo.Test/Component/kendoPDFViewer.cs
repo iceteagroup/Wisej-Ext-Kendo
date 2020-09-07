@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoPDFViewer1.Widget.open += new WidgetEventHandler(kendoPDFViewer1_WidgetEvent);
+			this.kendoPDFViewer1.Instance.open += new WidgetEventHandler(kendoPDFViewer1_WidgetEvent);
 		}
 
 		private void kendoPDFViewer1_WidgetEvent(object sender, WidgetEventArgs e)

@@ -19,3 +19,37 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+/**
+ * Filters the event data for Wisej.
+ * @param {any} args
+ */
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		//case "change":
+		//	return {
+		//		added: args.added,
+		//		removed: args.removed
+		//	};
+			
+		//case "click":
+		//	return {
+		//		item: args.item,
+		//		point: args.point
+		//	};
+
+		//case "itemBoundsChange":
+		//	return args.bounds;
+
+		//case "select":
+		//	return {
+		//		selected: args.selected,
+		//		deselected: args.deselected
+		//	};
+
+		case "toolBarclick":
+			return args.action;
+
+	}
+}

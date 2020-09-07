@@ -13,7 +13,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
 			this.kendoLinearGauge1.Options.transitions = this.checkBox1.Checked;
-			this.kendoLinearGauge1.Widget.value(this.numericUpDown1.Value);
+			this.kendoLinearGauge1.Instance.value(this.numericUpDown1.Value);
 
 			this.kendoLinearGauge1.Update();
 		}
@@ -34,7 +34,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 				for (var i = 0; i < 10; i++)
 				{
-					this.kendoLinearGauge1.Widget.value(rand.Next(-40, 60));
+					this.kendoLinearGauge1.Instance.value(rand.Next(-40, 60));
 					Application.Update(this);
 					Thread.Sleep(1000);
 				}

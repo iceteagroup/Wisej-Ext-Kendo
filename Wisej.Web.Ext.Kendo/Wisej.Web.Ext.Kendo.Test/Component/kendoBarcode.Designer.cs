@@ -72,10 +72,10 @@
 			// kendoBarcode1
 			// 
 			this.kendoBarcode1.Anchor = Wisej.Web.AnchorStyles.None;
-			this.kendoBarcode1.Location = new System.Drawing.Point(91, 141);
+			this.kendoBarcode1.Location = new System.Drawing.Point(91, 92);
 			this.kendoBarcode1.Name = "kendoBarcode1";
 			this.kendoBarcode1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse("{\"value\":\"WWW.WISEJ.COM/\",\"type\":\"code39\"}")));
-			this.kendoBarcode1.Size = new System.Drawing.Size(271, 79);
+			this.kendoBarcode1.Size = new System.Drawing.Size(271, 176);
 			this.kendoBarcode1.TabIndex = 0;
 			this.kendoBarcode1.Text = "kendoBarcode1";
 			// 

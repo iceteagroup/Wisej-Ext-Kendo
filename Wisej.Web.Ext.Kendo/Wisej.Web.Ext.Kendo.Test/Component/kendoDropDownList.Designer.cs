@@ -55,13 +55,14 @@
             | Wisej.Web.AnchorStyles.Right)));
 			this.kendoDropDownList1.Location = new System.Drawing.Point(123, 84);
 			this.kendoDropDownList1.Name = "kendoDropDownList1";
-			this.kendoDropDownList1.Size = new System.Drawing.Size(207, 145);
+			this.kendoDropDownList1.Size = new System.Drawing.Size(207, 30);
 			this.kendoDropDownList1.TabIndex = 0;
 			this.kendoDropDownList1.Text = "kendoDropDownList1";
 			// 
 			// kendoDropDownList
 			// 
 			this.Name = "kendoDropDownList";
+			this.Load += new System.EventHandler(this.kendoDropDownList_Load);
 			this.panel.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);

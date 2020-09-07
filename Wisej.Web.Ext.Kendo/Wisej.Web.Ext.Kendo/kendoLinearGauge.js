@@ -28,4 +28,4 @@ this.filterOptions = function (options) {
 	if (wisej.web.designMode)
 		options.transitions = false;
 
-}
+};

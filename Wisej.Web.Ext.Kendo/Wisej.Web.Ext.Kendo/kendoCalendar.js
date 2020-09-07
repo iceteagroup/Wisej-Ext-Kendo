@@ -25,7 +25,7 @@
  */
 this.initWidget = function (options) {
 
-	this.widget.element[0].style.boxSizing = "border-box";
+	this.getContentElement().setStyle("text-align", "center");
 }
 
 /**
@@ -33,3 +33,19 @@ this.initWidget = function (options) {
  **/
 this.resizeWidget = function () {
 }
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "change":
+			return args.sender.value();
+
+		case "navigate":
+			return args.sender.view().name;
+
+	}
+};

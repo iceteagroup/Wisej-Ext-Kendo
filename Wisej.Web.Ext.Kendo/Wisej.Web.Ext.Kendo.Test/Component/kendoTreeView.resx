@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="kendoTreeView1.Options" xml:space="preserve">
+    <value>{"dataSource":[{"id":1,"text":"My Documents","expanded":true,"spriteCssClass":"rootfolder","items":[{"id":2,"text":"Kendo UI Project","expanded":true,"spriteCssClass":"folder","items":[{"id":3,"text":"about.html","spriteCssClass":"html"},{"id":4,"text":"index.html","spriteCssClass":"html"},{"id":5,"text":"logo.png","spriteCssClass":"image"}]},{"id":6,"text":"Reports","expanded":true,"spriteCssClass":"folder","items":[{"id":7,"text":"February.pdf","spriteCssClass":"pdf"},{"id":8,"text":"March.pdf","spriteCssClass":"pdf"},{"id":9,"text":"April.pdf","spriteCssClass":"pdf"}]}]}],"dragAndDrop":true,"checkboxes":{"checkChildren":true},"loadOnDemand":true}</value>
+  </data>
   <metadata name="$this.RulerSnapLines" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0

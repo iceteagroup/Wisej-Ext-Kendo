@@ -24,21 +24,62 @@
  */
 this.filterOptions = function (options) {
 
-	var serviceUrl = this.getPostbackUrl();
+	var serviceUrl = this.getServiceUrl();
 
 	if (!options.pdf) {
 
 		options.pdf = {
+			forceProxy: true,
 			proxyURL: serviceUrl + "?action=export",
-			forceProxy: true
 		}
 	}
 
 	if (!options.excel) {
 
 		options.excel = {
+			forceProxy: true,
 			proxyURL: serviceUrl + "?action=export",
-			forceProxy: true
 		}
 	}
 };
+
+/**
+ * Filters the event data for Wisej.
+ * @param {any} args
+ */
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "cellClose":
+			return args.type;
+
+		case "columnHide":
+		case "columnLock":
+			return args.column;
+
+		case "columnMenuOpen":
+			return args.field;
+
+		case "columnReorder":
+			return {
+				column: args.column,
+				newIndex: args.newIndex,
+				oldIndex: args.oldIndex,
+			};
+
+		case "columnResize":
+			return {
+				column: args.column,
+				newWidth: args.newWidth,
+				oldWidth: args.oldWidth
+			};
+
+		case "columnShow":
+			return args.column;
+
+		case "columnUnlock":
+			return args.column;
+
+	}
+}

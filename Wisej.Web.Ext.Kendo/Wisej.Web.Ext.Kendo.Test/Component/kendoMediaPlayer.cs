@@ -9,9 +9,9 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoMediaPlayer1.Widget.end += new WidgetEventHandler(kendoMediaPlayer1_WidgetEvent);
-			this.kendoMediaPlayer1.Widget.play += new WidgetEventHandler(kendoMediaPlayer1_WidgetEvent);
-			this.kendoMediaPlayer1.Widget.pause += new WidgetEventHandler(kendoMediaPlayer1_WidgetEvent);
+			this.kendoMediaPlayer1.Instance.end += new WidgetEventHandler(kendoMediaPlayer1_WidgetEvent);
+			this.kendoMediaPlayer1.Instance.play += new WidgetEventHandler(kendoMediaPlayer1_WidgetEvent);
+			this.kendoMediaPlayer1.Instance.pause += new WidgetEventHandler(kendoMediaPlayer1_WidgetEvent);
 		}
 
 		private void kendoMediaPlayer1_WidgetEvent(object sender, WidgetEventArgs e)

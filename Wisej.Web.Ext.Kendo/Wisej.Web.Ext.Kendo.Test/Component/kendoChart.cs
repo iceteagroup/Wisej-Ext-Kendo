@@ -11,9 +11,9 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoChart1.Widget.legendItemClick += new WidgetEventHandler(kendoChart1_WidgetEvent);
-			this.kendoChart1.Widget.seriesClick += new WidgetEventHandler(kendoChart1_WidgetEvent);
-			this.kendoChart1.Widget.select += new WidgetEventHandler(kendoChart1_WidgetEvent);
+			this.kendoChart1.Instance.legendItemClick += new WidgetEventHandler(kendoChart1_WidgetEvent);
+			this.kendoChart1.Instance.seriesClick += new WidgetEventHandler(kendoChart1_WidgetEvent);
+			this.kendoChart1.Instance.select += new WidgetEventHandler(kendoChart1_WidgetEvent);
 		}
 
 		private void kendoChart1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -37,7 +37,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 					break;
 				
 				case "PDF":
-					this.kendoChart1.Widget.exportPDF();
+					this.kendoChart1.Instance.exportPDF();
 					break;
 			}
 		}
@@ -64,6 +64,15 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			{
 				Application.Download(ms, fileName);
 			}
+		}
+
+		private void buttonUpdate_Click(object sender, EventArgs e)
+		{
+			this.kendoChart1.Options.transitions = this.checkBox1.Checked;
+			this.kendoChart1.Options.pannable = this.checkBox2.Checked;
+			this.kendoChart1.Options.categoryAxis.labels.visible = this.checkBox3.Checked;
+
+			this.kendoChart1.Update();
 		}
 	}
 }

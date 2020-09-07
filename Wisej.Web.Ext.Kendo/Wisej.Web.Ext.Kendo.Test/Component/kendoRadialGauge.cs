@@ -27,7 +27,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 				for (var i = 0; i < 10; i++)
 				{
-					this.kendoRadialGauge1.Widget.value(rand.Next(0, 180));
+					this.kendoRadialGauge1.Instance.value(rand.Next(0, 180));
 					Application.Update(this);
 					Thread.Sleep(1000);
 				}
@@ -42,7 +42,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
 			this.kendoRadialGauge1.Options.transitions = this.checkBox1.Checked;
-			this.kendoRadialGauge1.Widget.value(this.numericUpDown1.Value);
+			this.kendoRadialGauge1.Instance.value(this.numericUpDown1.Value);
 
 			this.kendoRadialGauge1.Update();
 		}

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kendoTreeView));
 			this.kendoTreeView1 = new Wisej.Web.Ext.Kendo.kendoTreeView();
 			this.panel.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -53,6 +54,7 @@
 			// 
 			this.kendoTreeView1.Location = new System.Drawing.Point(51, 31);
 			this.kendoTreeView1.Name = "kendoTreeView1";
+			this.kendoTreeView1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoTreeView1.Options"))));
 			this.kendoTreeView1.Size = new System.Drawing.Size(350, 250);
 			this.kendoTreeView1.TabIndex = 0;
 			this.kendoTreeView1.Text = "kendoTreeView1";

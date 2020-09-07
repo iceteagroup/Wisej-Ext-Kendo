@@ -9,9 +9,9 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoFileManager1.Widget.navigate += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
-			this.kendoFileManager1.Widget.select += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
-			this.kendoFileManager1.Widget.execute += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
+			this.kendoFileManager1.Instance.navigate += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
+			this.kendoFileManager1.Instance.select += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
+			this.kendoFileManager1.Instance.execute += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
 		}
 
 		private void kendoFileManager1_WidgetEvent(object sender, WidgetEventArgs e)

@@ -24,7 +24,7 @@
  */
 this.filterOptions = function (options) {
 
-	var serviceUrl = this.getPostbackUrl();
+	var serviceUrl = this.getServiceUrl();
 
 	if (!options.pdf) {
 

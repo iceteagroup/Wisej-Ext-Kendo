@@ -12,7 +12,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
-			this.kendoQRCode1.Widget.value(this.textBox1.Text);
+			this.kendoQRCode1.Instance.value(this.textBox1.Text);
 			this.kendoQRCode1.Options.color = this.textBox2.Text;
 
 			this.kendoQRCode1.Update();

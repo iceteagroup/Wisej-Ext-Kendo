@@ -49,8 +49,9 @@
 			this.panel2.Name = "panel2";
 			this.panel2.ShowCloseButton = false;
 			this.panel2.ShowHeader = true;
-			this.panel2.Size = new System.Drawing.Size(810, 474);
+			this.panel2.Size = new System.Drawing.Size(936, 463);
 			this.panel2.TabIndex = 6;
+			this.panel2.TabStop = true;
 			this.panel2.Text = "Test";
 			// 
 			// panel1
@@ -65,8 +66,9 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Padding = new Wisej.Web.Padding(20);
 			this.panel1.ShowHeader = true;
-			this.panel1.Size = new System.Drawing.Size(250, 474);
+			this.panel1.Size = new System.Drawing.Size(250, 463);
 			this.panel1.TabIndex = 5;
+			this.panel1.TabStop = true;
 			this.panel1.Text = "Component";
 			// 
 			// listBox1
@@ -75,10 +77,9 @@
 			this.listBox1.DisplayMember = "Name";
 			this.listBox1.Dock = Wisej.Web.DockStyle.Fill;
 			this.listBox1.IconMember = "Icon";
-			this.listBox1.LabelText = null;
 			this.listBox1.Location = new System.Drawing.Point(20, 20);
 			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(208, 392);
+			this.listBox1.Size = new System.Drawing.Size(208, 381);
 			this.listBox1.TabIndex = 0;
 			this.listBox1.ValueMember = "Name";
 			this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
@@ -91,8 +92,9 @@
 			this.panel3.Dock = Wisej.Web.DockStyle.Top;
 			this.panel3.Location = new System.Drawing.Point(0, 0);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(1060, 100);
+			this.panel3.Size = new System.Drawing.Size(1186, 100);
 			this.panel3.TabIndex = 4;
+			this.panel3.TabStop = true;
 			// 
 			// comboBox1
 			// 
@@ -143,8 +145,7 @@
             "rtl",
             "silver",
             "uniform"});
-			this.comboBox1.LabelText = null;
-			this.comboBox1.Location = new System.Drawing.Point(836, 49);
+			this.comboBox1.Location = new System.Drawing.Point(962, 49);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(193, 35);
 			this.comboBox1.TabIndex = 3;
@@ -172,14 +173,14 @@
 			// 
 			// MainView
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
 			this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel3);
 			this.Name = "MainView";
-			this.Size = new System.Drawing.Size(1060, 574);
-			this.Text = "Page1";
+			this.Size = new System.Drawing.Size(1186, 563);
+			this.Text = "Wisej KendoUI Integration Tests";
 			this.Load += new System.EventHandler(this.MainView_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);

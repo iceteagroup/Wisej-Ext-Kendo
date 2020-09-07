@@ -25,3 +25,16 @@
  **/
 this.resizeWidget = function () {
 }
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "select":
+			return args.item;
+
+	}
+};

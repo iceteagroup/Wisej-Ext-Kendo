@@ -1,4 +1,4 @@
-﻿//# sourceURL=wisej.web.ext.KendoWidget.TODO.js
+﻿//# sourceURL=wisej.web.ext.KendoWidget.kendoMap.js
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -19,3 +19,36 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+/**
+ * Filters the event data for Wisej.
+ * @param {any} args
+ */
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "click":
+			return {
+				lat: args.location.lat,
+				lng: args.location.lng,
+			};
+
+		case "markerActivated":
+		case "markerCreated":
+		case "markerClick":
+			return {
+				lat: args.marker.location().lat,
+				lng: args.marker.location().lng,
+				title: args.marker.options.title
+			};
+
+		case "pan":
+			return {
+				originLat: args.origin.lat,
+				originLng: args.origin.lng,
+				centerLat: args.center.lat,
+				centerLng: args.center.lng
+			};
+
+	}
+}

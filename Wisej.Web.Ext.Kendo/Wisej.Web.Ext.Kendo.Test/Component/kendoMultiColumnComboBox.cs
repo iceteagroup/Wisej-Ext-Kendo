@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoMultiColumnComboBox1.Widget.select += new WidgetEventHandler(kendoMultiColumnComboBox1_WidgetEvent);
+			this.kendoMultiColumnComboBox1.Instance.select += new WidgetEventHandler(kendoMultiColumnComboBox1_WidgetEvent);
 		}
 
 		private void kendoMultiColumnComboBox1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -27,7 +27,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			this.kendoMultiColumnComboBox1.Options.ignoreCase = this.checkBox2.Checked;
 			this.kendoMultiColumnComboBox1.Options.suggest = this.checkBox3.Checked;
 			this.kendoMultiColumnComboBox1.Options.syncValueAndText = this.checkBox4.Checked;
-			this.kendoMultiColumnComboBox1.Widget.value(this.textBox1.Text);
+			this.kendoMultiColumnComboBox1.Instance.value(this.textBox1.Text);
 
 			this.kendoMultiColumnComboBox1.Update();
 		}

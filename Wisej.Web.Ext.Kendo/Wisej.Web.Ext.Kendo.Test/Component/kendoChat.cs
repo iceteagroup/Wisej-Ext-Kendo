@@ -11,12 +11,12 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoChat1.Widget.typingStart += new WidgetEventHandler(kendoChat1_WidgetEvent);
-			this.kendoChat1.Widget.actionClick += new WidgetEventHandler(kendoChat1_actionClick);
-			this.kendoChat1.Widget.typingEnd += new WidgetEventHandler(kendoChat1_WidgetEvent);
-			this.kendoChat1.Widget.toolClick += new WidgetEventHandler(kendoChat1_WidgetEvent);
-			this.kendoChat1.Widget.sendMessage += new WidgetEventHandler(kendoChat1_sendMessage);
-			this.kendoChat1.Widget.post += new WidgetEventHandler(kendoChat1_WidgetEvent);
+			this.kendoChat1.Instance.typingStart += new WidgetEventHandler(kendoChat1_WidgetEvent);
+			this.kendoChat1.Instance.actionClick += new WidgetEventHandler(kendoChat1_actionClick);
+			this.kendoChat1.Instance.typingEnd += new WidgetEventHandler(kendoChat1_WidgetEvent);
+			this.kendoChat1.Instance.toolClick += new WidgetEventHandler(kendoChat1_WidgetEvent);
+			this.kendoChat1.Instance.sendMessage += new WidgetEventHandler(kendoChat1_sendMessage);
+			this.kendoChat1.Instance.post += new WidgetEventHandler(kendoChat1_WidgetEvent);
 		}
 
 		private void kendoChat1_WidgetEvent(object sender, WidgetEventArgs e)
@@ -44,7 +44,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 			Application.StartTask(() => {
 
-				this.kendoChat1.Widget.renderMessage(new
+				this.kendoChat1.Instance.renderMessage(new
 				{
 					type = "typing"
 				}, new
@@ -57,7 +57,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 				Thread.Sleep(1000);
 
-				this.kendoChat1.Widget.renderMessage(new
+				this.kendoChat1.Instance.renderMessage(new
 				{
 					type = "text",
 					text = response
@@ -91,7 +91,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 			Application.StartTask(() => {
 
-				this.kendoChat1.Widget.renderMessage(new
+				this.kendoChat1.Instance.renderMessage(new
 				{
 					type = "typing"
 				}, new
@@ -104,7 +104,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 				Thread.Sleep(1000);
 
-				this.kendoChat1.Widget.renderMessage(new
+				this.kendoChat1.Instance.renderMessage(new
 				{
 					type = "text",
 					text = response
@@ -122,7 +122,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			Application.StartTask(() => {
 
-				this.kendoChat1.Widget.renderMessage(new
+				this.kendoChat1.Instance.renderMessage(new
 				{
 					type = "typing"
 				}, new
@@ -135,7 +135,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 				Thread.Sleep(1000);
 
-				this.kendoChat1.Widget.renderMessage(new
+				this.kendoChat1.Instance.renderMessage(new
 				{
 					type = "text",
 					text = "Hi, I'm the Wisej Chat Bot! How can I help you?"
@@ -145,7 +145,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 					name = "Wisej Chat Bot",
 					iconUrl = "Images/Chat/ANTON.jpg"
 				});
-				this.kendoChat1.Widget.renderSuggestedActions(new[] {
+				this.kendoChat1.Instance.renderSuggestedActions(new[] {
 					new {
 						title = "Try Wisej",
 						value = "Try Wisej"
@@ -162,7 +162,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 		private async void button1_Click(object sender, EventArgs e)
 		{
-			var data = await this.kendoChat1.Widget.getUserAsync();
+			var data = await this.kendoChat1.Instance.getUserAsync();
 
 			AlertBox.Show(data.ToString());
 		}

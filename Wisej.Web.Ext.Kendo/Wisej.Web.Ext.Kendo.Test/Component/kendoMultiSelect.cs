@@ -9,7 +9,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoMultiSelect1.Widget.select += new WidgetEventHandler(kendoMultiSelect1_WidgetEvent);
+			this.kendoMultiSelect1.Instance.select += new WidgetEventHandler(kendoMultiSelect1_WidgetEvent);
 		}
 
 		private void kendoMultiSelect1_WidgetEvent(object sender, WidgetEventArgs e)
