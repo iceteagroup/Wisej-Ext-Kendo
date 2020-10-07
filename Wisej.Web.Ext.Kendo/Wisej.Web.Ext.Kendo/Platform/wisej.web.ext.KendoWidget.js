@@ -356,10 +356,13 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 			} catch (ex) { }
 		}
 	},
-	destroy: function () {
 
-		if (this.widget)
+	destruct: function () {
+
+		if (this.widget) {
 			this.widget.destroy();
+			this.widget = null;
+		}
 	}
 });
 
