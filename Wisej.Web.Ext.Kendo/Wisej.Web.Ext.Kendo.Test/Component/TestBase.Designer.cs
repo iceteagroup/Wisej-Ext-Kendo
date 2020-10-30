@@ -83,6 +83,7 @@
 			this.panel.Padding = new Wisej.Web.Padding(8);
 			this.panel.Size = new System.Drawing.Size(455, 315);
 			this.panel.TabIndex = 12;
+			this.panel.TabStop = true;
 			// 
 			// groupBox1
 			// 
@@ -114,6 +115,7 @@
 			this.linkDemo.TabIndex = 10;
 			this.linkDemo.Text = "https://demos.telerik.com/kendo-ui/";
 			this.linkDemo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.linkDemo.LinkClicked += new Wisej.Web.LinkLabelLinkClickedEventHandler(this.linkDocs_LinkClicked);
 			// 
 			// imageList1
 			// 
@@ -130,6 +132,7 @@
 			this.linkAPI.TabIndex = 9;
 			this.linkAPI.Text = "https://docs.telerik.com/kendo-ui/api/javascript/kendo";
 			this.linkAPI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.linkAPI.LinkClicked += new Wisej.Web.LinkLabelLinkClickedEventHandler(this.linkDocs_LinkClicked);
 			// 
 			// linkDocs
 			// 
@@ -142,6 +145,7 @@
 			this.linkDocs.TabIndex = 8;
 			this.linkDocs.Text = "https://docs.telerik.com/kendo-ui/introduction";
 			this.linkDocs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.linkDocs.LinkClicked += new Wisej.Web.LinkLabelLinkClickedEventHandler(this.linkDocs_LinkClicked);
 			// 
 			// TestBase
 			// 

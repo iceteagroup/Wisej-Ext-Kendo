@@ -9,5 +9,10 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 		}
+
+		private void linkDocs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			Application.Navigate(e.Link, "Kendo UI");
+		}
 	}
 }
