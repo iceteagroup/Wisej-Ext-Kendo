@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Web;
 using Wisej.Web;
 
 namespace Wisej.Web.Ext.Kendo.Test.Component
@@ -33,23 +34,17 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			switch (e.Request.QueryString["action"])
 			{
 				case "export":
-					this.ExportDocument(e.Request.Form["base64"], e.Request.Form["fileName"]);
+					this.ExportDocument(e.Response, e.Request.Form["base64"], e.Request.Form["fileName"]);
 					break;
 
 			}
-			e.Response.StatusCode = (int)HttpStatusCode.NoContent;
 		}
 
-		private void ExportDocument(string base64, string fileName)
+		private void ExportDocument(HttpResponse response, string base64Data, string fileName)
 		{
-			AlertBox.Show($"Received the file {fileName} on the server.");
-
-			var bytes = Convert.FromBase64String(base64);
-
-			using (var ms = new MemoryStream(bytes))
-			{
-				Application.Download(ms, fileName);
-			}
+			var bytes = Convert.FromBase64String(base64Data);
+			response.AddHeader("Content-Disposition", $"attachment; filename={fileName}");
+			response.OutputStream.Write(bytes, 0, bytes.Length);
 		}
 
 		private void buttonPDF_Click(object sender, EventArgs e)

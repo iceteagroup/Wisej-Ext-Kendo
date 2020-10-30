@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Web;
 using System.Web.UI.WebControls;
 using Wisej.Web;
 
@@ -36,24 +37,17 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			{
 				case "export":
 					// do whatever you want with the file.
-					HandleFile(e.Request.Form["contentType"], e.Request.Form["base64"], e.Request.Form["fileName"]);
+					HandleFile(e.Response, e.Request.Form["base64"], e.Request.Form["fileName"]);
 					break;
 
 			}
-			// returns a response to the client that the request is finished.
-			e.Response.StatusCode = (int)HttpStatusCode.NoContent;
 		}
 
-		private void HandleFile(string contentType, string base64Data, string fileName)
+		private void HandleFile(HttpResponse response, string base64Data, string fileName)
 		{
-			AlertBox.Show("Received the PDF on the server.");
-
-			var data = Convert.FromBase64String(base64Data);
-
-			using (var ms = new MemoryStream(data))
-			{
-				Application.Download(ms, fileName);
-			}
+			var bytes = Convert.FromBase64String(base64Data);
+			response.AddHeader("Content-Disposition", $"attachment; filename={fileName}");
+			response.OutputStream.Write(bytes, 0, bytes.Length);
 		}
 	}
 }

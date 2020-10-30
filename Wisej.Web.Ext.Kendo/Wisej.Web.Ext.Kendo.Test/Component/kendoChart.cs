@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Web;
 using Wisej.Web;
 
 namespace Wisej.Web.Ext.Kendo.Test.Component
@@ -47,23 +48,17 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			switch (e.Request.QueryString["action"])
 			{
 				case "export":
-					HandleFile(e.Request.Form["contentType"], e.Request.Form["base64"], e.Request.Form["fileName"]);
+					HandleFile(e.Response, e.Request.Form["contentType"], e.Request.Form["base64"], e.Request.Form["fileName"]);
 					break;
 
 			}
-			e.Response.StatusCode = (int)HttpStatusCode.NoContent;
 		}
 
-		private void HandleFile(string contentType, string base64Data, string fileName)
+		private void HandleFile(HttpResponse response, string contentType, string base64Data, string fileName)
 		{
-			AlertBox.Show($"Received {fileName} on the server.");
-
-			var data = Convert.FromBase64String(base64Data);
-
-			using (var ms = new MemoryStream(data))
-			{
-				Application.Download(ms, fileName);
-			}
+			var bytes = Convert.FromBase64String(base64Data);
+			response.AddHeader("Content-Disposition", $"attachment; filename={fileName}");
+			response.OutputStream.Write(bytes, 0, bytes.Length);
 		}
 
 		private void buttonUpdate_Click(object sender, EventArgs e)

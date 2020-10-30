@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Net.Mime;
+using System.Web;
 
 namespace Wisej.Web.Ext.Kendo.Test.Component
 {
@@ -38,23 +40,17 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			switch (e.Request.QueryString["action"])
 			{
 				case "export":
-					this.ExportDocument(e.Request.Form["base64"], e.Request.Form["fileName"]);
+					// prepare for download.
+					this.ExportDocument(e.Request.Form["base64"], e.Request.Form["fileName"], e.Response);
 					break;
-
 			}
-			e.Response.StatusCode = (int)HttpStatusCode.NoContent;
 		}
 
-		private void ExportDocument(string base64, string fileName)
+		private void ExportDocument(string base64Data, string fileName, HttpResponse response)
 		{
-			AlertBox.Show($"Received the file {fileName} on the server.");
-
-			var bytes = Convert.FromBase64String(base64);
-
-			using (var ms = new MemoryStream(bytes))
-			{
-				Application.Download(ms, fileName);
-			}
+			var bytes = Convert.FromBase64String(base64Data);
+			response.AddHeader("Content-Disposition", $"attachment; filename={fileName}");
+			response.OutputStream.Write(bytes, 0, bytes.Length);
 		}
 
 		private void buttonUpdate_Click(object sender, EventArgs e)
