@@ -211,18 +211,18 @@ namespace Wisej.Web.Ext.Kendo
 		/// <para>Message file: kendo.messages.en-US.js</para>
 		/// </remarks>
 		[DefaultValue(null)]
-		public static List<Package> Locales
+		public static List<Package> Cultures
 		{
-			get { return kendoBase._locales; }
+			get { return kendoBase._cultures; }
 			set
 			{
-				if (kendoBase._locales != value)
+				if (kendoBase._cultures != value)
 				{
-					kendoBase._locales = value;
+					kendoBase._cultures = value;
 				}
 			}
 		}
-		private static List<Package> _locales;
+		private static List<Package> _cultures;
 
 		/// <summary>
 		/// Returns or sets the list of events that are fired by the widget wrapper.
@@ -308,7 +308,7 @@ namespace Wisej.Web.Ext.Kendo
 					var culturesName = $"kendo.culture.{culture}";
 					try
 					{
-						culturesPackage = kendoBase._locales.Find((p) => p.Name.StartsWith(culturesName));
+						culturesPackage = kendoBase._cultures.Find((p) => p.Name.StartsWith(culturesName));
 					}
 					catch { }
 
@@ -326,7 +326,7 @@ namespace Wisej.Web.Ext.Kendo
 					var messagesName = $"kendo.messages.{culture}";
 					try
 					{
-						messagesPackage = kendoBase._locales.Find((p) => p.Name.StartsWith(messagesName));
+						messagesPackage = kendoBase._cultures.Find((p) => p.Name.StartsWith(messagesName));
 					}
 					catch { }
 
