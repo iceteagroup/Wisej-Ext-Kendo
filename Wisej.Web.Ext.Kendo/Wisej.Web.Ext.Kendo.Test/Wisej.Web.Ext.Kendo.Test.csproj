@@ -381,7 +381,7 @@
     </Reference>
     <Reference Include="Wisej.Web.Ext.Kendo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\bin\Wisej.Web.Ext.Kendo.dll</HintPath>
+      <HintPath>..\Wisej.Web.Ext.Kendo\bin\Debug\Wisej.Web.Ext.Kendo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

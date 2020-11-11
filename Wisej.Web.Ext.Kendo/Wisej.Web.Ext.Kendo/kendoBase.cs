@@ -18,16 +18,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Design;
-using System.Dynamic;
 using System.IO;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Wisej.Base;
 using Wisej.Core;
 using Wisej.Design;
@@ -41,9 +37,11 @@ namespace Wisej.Web.Ext.Kendo
 	public abstract class kendoBase : Widget
 	{
 		internal const string DEFAULT_THEME = "default";
+		internal const string DEFAULT_CULTURE = "en-US";
 		internal const string NAMESPACE = "Wisej.Web.Ext.Kendo";
 		internal const string RESOURCES_ROOT = "Wisej.Web.Ext.Kendo.Kendo";
 		internal const string THEMENAME_KEY = "Wisej.Web.Ext.Kendo.ThemeName";
+		internal const string CULTURENAME_KEY = "Wisej.Web.Ext.Kendo.CultureName";
 
 		#region Constructors
 
@@ -122,6 +120,30 @@ namespace Wisej.Web.Ext.Kendo
 		}
 
 		/// <summary>
+		/// Returns or sets the culture for all the Kendo widgets in the application.
+		/// </summary>
+		public static string Culture
+		{
+			get { return Application.Session[CULTURENAME_KEY] ?? DEFAULT_CULTURE; }
+			set
+			{
+				if (String.IsNullOrEmpty(value))
+					value = DEFAULT_CULTURE;
+
+				if (Theme != value)
+				{
+					Application.Session[CULTURENAME_KEY] = value;
+
+					foreach (kendoBase widget in Application.FindComponents(c => c is kendoBase))
+					{
+						widget.Packages.Clear();
+						widget.Update();
+					}
+				}
+			}
+		}
+
+		/// <summary>
 		/// Returns whether the javascript widget has been initialized.
 		/// </summary>
 		[Browsable(false)]
@@ -183,20 +205,24 @@ namespace Wisej.Web.Ext.Kendo
 		/// <summary>
 		/// Property for Kendo localization packages
 		/// </summary>
+		/// <remarks>
+		/// Localization packages should use the following naming convention:
+		/// <para>Culture file: kendo.culture.en-US.js</para>
+		/// <para>Message file: kendo.messages.en-US.js</para>
+		/// </remarks>
 		[DefaultValue(null)]
-		public Package[] Locales
+		public static List<Package> Locales
 		{
-			get { return this._locales; }
+			get { return kendoBase._locales; }
 			set
 			{
-				if (this._locales != value)
+				if (kendoBase._locales != value)
 				{
-					this._locales = value;
-					this.Packages.Clear();
+					kendoBase._locales = value;
 				}
 			}
 		}
-		private Package[] _locales;
+		private static List<Package> _locales;
 
 		/// <summary>
 		/// Returns or sets the list of events that are fired by the widget wrapper.
@@ -274,6 +300,46 @@ namespace Wisej.Web.Ext.Kendo
 							Source = $"{themeUrl}"
 						});
 					}
+
+					// add the culture files.
+					var culture = kendoBase.Culture;
+
+					Package culturesPackage = null;
+					var culturesName = $"kendo.culture.{culture}";
+					try
+					{
+						culturesPackage = kendoBase._locales.Find((p) => p.Name.StartsWith(culturesName));
+					}
+					catch { }
+
+					if (culturesPackage == null)
+					{
+						culturesPackage = new Package()
+						{
+							Name = culturesName,
+							Source = this.GetResourceURL($"{RESOURCES_ROOT}/js/cultures/{culturesName}.min.js")
+						};
+					}
+					packages.Add(culturesPackage);
+
+					Package messagesPackage = null;
+					var messagesName = $"kendo.messages.{culture}";
+					try
+					{
+						messagesPackage = kendoBase._locales.Find((p) => p.Name.StartsWith(messagesName));
+					}
+					catch { }
+
+					if (messagesPackage == null)
+					{
+						messagesPackage = new Package()
+						{
+							Name = messagesName,
+							Source = this.GetResourceURL($"{RESOURCES_ROOT}/js/messages/{messagesName}.min.js")
+						};
+					}
+
+					packages.Add(messagesPackage);
 
 					// add custom packages.
 					if (this.Includes != null)

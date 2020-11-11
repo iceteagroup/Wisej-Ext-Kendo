@@ -665,6 +665,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Kendo\js\cultures\kendo.culture.en-US.min.js" />
+    <EmbeddedResource Include="Kendo\js\messages\kendo.messages.en-US.min.js" />
+    <EmbeddedResource Include="Kendo\js\messages\kendo.messages.de-DE.min.js" />
+    <EmbeddedResource Include="Kendo\js\messages\kendo.messages.es-ES.min.js" />
+    <EmbeddedResource Include="Kendo\js\messages\kendo.messages.fr-FR.min.js" />
+    <EmbeddedResource Include="Kendo\js\messages\kendo.messages.it-IT.min.js" />
+    <EmbeddedResource Include="Kendo\js\messages\kendo.messages.pt-PT.min.js" />
+    <EmbeddedResource Include="Kendo\js\cultures\kendo.culture.de-DE.min.js" />
+    <EmbeddedResource Include="Kendo\js\cultures\kendo.culture.es-ES.min.js" />
+    <EmbeddedResource Include="Kendo\js\cultures\kendo.culture.fr-FR.min.js" />
+    <EmbeddedResource Include="Kendo\js\cultures\kendo.culture.it-IT.min.js" />
+    <EmbeddedResource Include="Kendo\js\cultures\kendo.culture.pt-PT.min.js" />
     <EmbeddedResource Include="Kendo\pdfjs\pdf.js" />
     <EmbeddedResource Include="kendoBarcode.js">
       <DependentUpon>kendoBarcode.cs</DependentUpon>
@@ -704,6 +716,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Platform\wisej.web.ext.KendoWidget.css" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(ProjectDir)..\..\bin"
