@@ -36,7 +36,6 @@
 			this.comboBox1 = new Wisej.Web.ComboBox();
 			this.label1 = new Wisej.Web.Label();
 			this.pictureBox1 = new Wisej.Web.PictureBox();
-			this.button1 = new Wisej.Web.Button();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,7 +87,6 @@
 			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.button1);
 			this.panel3.Controls.Add(this.comboBox2);
 			this.panel3.Controls.Add(this.comboBox1);
 			this.panel3.Controls.Add(this.label1);
@@ -194,14 +192,6 @@
 			this.pictureBox1.Size = new System.Drawing.Size(71, 69);
 			this.pictureBox1.SizeMode = Wisej.Web.PictureBoxSizeMode.Zoom;
 			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(583, 50);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(100, 27);
-			this.button1.TabIndex = 9;
-			this.button1.Text = "button1";
-			// 
 			// MainView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -230,7 +220,6 @@
 		private Label label1;
 		private PictureBox pictureBox1;
 		private ComboBox comboBox2;
-		private Button button1;
 	}
 }
 
