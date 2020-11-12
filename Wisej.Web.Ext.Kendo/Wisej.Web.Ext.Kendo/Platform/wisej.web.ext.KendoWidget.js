@@ -37,6 +37,11 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 	properties: {
 
 		/**
+		 * The culture that gets applied to the widget.
+		 */
+		culture: { init: null, check: "String" },
+
+		/**
 		 * WidgetClass property.
 		 *
 		 * The name of the actual kn javascript class.
@@ -85,6 +90,13 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 		 * @param options {Map} Options map (optional).
 		 */
 		init: function (options) {
+
+			var currentCulture = this.getCulture();
+			var kendoCulture = kendo.getCulture().name;
+
+			if (currentCulture !== kendoCulture) {
+				kendo.culture(currentCulture);
+			}
 
 			var html = this.getWidgetHtml();
 			if (html) {

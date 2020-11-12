@@ -130,7 +130,7 @@ namespace Wisej.Web.Ext.Kendo
 				if (String.IsNullOrEmpty(value))
 					value = DEFAULT_CULTURE;
 
-				if (Theme != value)
+				if (Culture != value)
 				{
 					Application.Session[CULTURENAME_KEY] = value;
 
@@ -222,7 +222,7 @@ namespace Wisej.Web.Ext.Kendo
 				}
 			}
 		}
-		private static List<Package> _cultures;
+		private static List<Package> _cultures = new List<Package>();
 
 		/// <summary>
 		/// Returns or sets the list of events that are fired by the widget wrapper.
@@ -301,16 +301,11 @@ namespace Wisej.Web.Ext.Kendo
 						});
 					}
 
-					// add the culture files.
+					// add the culture packages.
 					var culture = kendoBase.Culture;
 
-					Package culturesPackage = null;
 					var culturesName = $"kendo.culture.{culture}";
-					try
-					{
-						culturesPackage = kendoBase._cultures.Find((p) => p.Name.StartsWith(culturesName));
-					}
-					catch { }
+					var culturesPackage = kendoBase._cultures.Find((p) => p.Name.StartsWith(culturesName));
 
 					if (culturesPackage == null)
 					{
@@ -322,13 +317,8 @@ namespace Wisej.Web.Ext.Kendo
 					}
 					packages.Add(culturesPackage);
 
-					Package messagesPackage = null;
 					var messagesName = $"kendo.messages.{culture}";
-					try
-					{
-						messagesPackage = kendoBase._cultures.Find((p) => p.Name.StartsWith(messagesName));
-					}
-					catch { }
+					var messagesPackage = kendoBase._cultures.Find((p) => p.Name.StartsWith(messagesName)); ;
 
 					if (messagesPackage == null)
 					{
@@ -463,6 +453,7 @@ namespace Wisej.Web.Ext.Kendo
 			base.OnWebRender((object)config);
 
 			config.className = "wisej.web.ext.KendoWidget";
+			config.culture = kendoBase.Culture;
 			config.widgetHtml = this.WidgetHtml;
 			config.widgetClass = this.WidgetClass;
 			config.widgetEvents = this.WidgetEvents;
