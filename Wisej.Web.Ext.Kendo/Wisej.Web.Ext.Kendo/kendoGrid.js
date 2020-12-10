@@ -41,6 +41,19 @@ this.filterOptions = function (options) {
 			proxyURL: serviceUrl + "?action=export",
 		}
 	}
+
+	var columns = options.columns;
+	if (columns) {
+		for (i = 0; i < columns.length; i++) {
+			var command = columns[i].command;
+			if (command) {
+				var click = command.click;
+				if (click) {
+					command.click = this.initFunction(click);
+				}
+			}
+		}
+	}
 };
 
 /**
