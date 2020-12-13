@@ -34,7 +34,7 @@ this.filterEventData = function (args) {
 	switch (args.type) {
 
 		case "select":
-			return args.item;
+			return args.dataItem;
 
 	}
 };

@@ -59,11 +59,6 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 		widgetEvents: { init: [], check: "Array" },
 
 		/**
-		 * Names of the events fired by the widget that should be wired back to the server.
-		 */
-		widgetWiredEvents: { init: [], check: "Array" },
-
-		/**
 		 * Collection of additional javascript methods to add to the widget.
 		 */
 		widgetFunctions: { init: [], check: "Array", apply: "_applyWidgetFunctions" },
@@ -200,8 +195,8 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 		_registerEventHandlers: function (options) {
 
 			var name, source, eventName;
+			var wiredEvents = this.getEvents();
 			var handlers = this.getWidgetEvents();
-			var wiredEvents = this.getWidgetWiredEvents();
 
 			if (handlers && handlers.length > 0) {
 				for (var i = 0; i < handlers.length; i++) {
@@ -250,7 +245,7 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 				if (handler)
 					handler.call(this, args);
 
-				var wiredEvents = me.getWidgetWiredEvents();
+				var wiredEvents = me.getEvents();
 				if (wiredEvents && wiredEvents.indexOf(eventType) > -1) {
 
 					// make sure there is always one field or
@@ -281,7 +276,11 @@ qx.Class.define("wisej.web.ext.KendoWidget", {
 				var functions = this.getWidgetFunctions();
 				for (var i = 0; i < functions.length; i++) {
 					if (functions[i].name == name) {
-						return new Function(functions[i].source);
+
+						var func = new Function("//# sourceURL=" + this.getName() + "." + name +
+							"\r\n\r\n" + functions[i].source);
+
+						return func.bind(this);
 					}
 				}
 			}

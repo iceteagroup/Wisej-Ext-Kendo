@@ -41,6 +41,7 @@ namespace Wisej.Web.Ext.Kendo
 				"beforeEdit",
 				"cancel",
 				"cellClose",
+				"cellClick",
 				"change",
 				"columnHide",
 				"columnLock",
