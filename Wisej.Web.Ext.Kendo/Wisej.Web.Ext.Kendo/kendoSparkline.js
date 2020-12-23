@@ -19,3 +19,24 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "axisLabelClick":
+			return {
+				text: args.text,
+				index: args.index
+			};
+
+		case "seriesClick":
+		case "plotAreaClick":
+			return {
+				value: args.value,
+				category: args.category
+			};
+	}
+}

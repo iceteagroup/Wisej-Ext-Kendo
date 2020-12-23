@@ -19,6 +19,19 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+
+this.initWidget = function () {
+
+	this.container = widget(this.getId() + "_container");
+}
+
+this.resizeWidget = function () {
+
+	var widget = this.widget;
+
+	debugger;
+}
+
 /**
  * Filters the event data for Wisej.
  * @param {any} args

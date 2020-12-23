@@ -36,6 +36,7 @@
 			// panel
 			// 
 			this.panel.Controls.Add(this.kendoMultiViewCalendar1);
+			this.panel.Size = new System.Drawing.Size(558, 315);
 			// 
 			// linkDemo
 			// 
@@ -51,18 +52,17 @@
 			// 
 			// kendoMultiViewCalendar1
 			// 
-			this.kendoMultiViewCalendar1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
-            | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
-			this.kendoMultiViewCalendar1.Location = new System.Drawing.Point(14, 19);
+			this.kendoMultiViewCalendar1.Anchor = Wisej.Web.AnchorStyles.None;
+			this.kendoMultiViewCalendar1.Location = new System.Drawing.Point(25, 19);
 			this.kendoMultiViewCalendar1.Name = "kendoMultiViewCalendar1";
-			this.kendoMultiViewCalendar1.Size = new System.Drawing.Size(425, 275);
+			this.kendoMultiViewCalendar1.Size = new System.Drawing.Size(506, 275);
 			this.kendoMultiViewCalendar1.TabIndex = 0;
 			this.kendoMultiViewCalendar1.Text = "kendoMultiViewCalendar1";
 			// 
 			// kendoMultiViewCalendar
 			// 
 			this.Name = "kendoMultiViewCalendar";
+			this.Size = new System.Drawing.Size(967, 505);
 			this.panel.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);

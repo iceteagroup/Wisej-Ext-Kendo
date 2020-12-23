@@ -28,7 +28,7 @@ this.filterEventData = function (args) {
 	switch (args.type) {
 
 		case "change":
-			return args.sender.value();
+			return args.sender.range();
 
 	}
 }

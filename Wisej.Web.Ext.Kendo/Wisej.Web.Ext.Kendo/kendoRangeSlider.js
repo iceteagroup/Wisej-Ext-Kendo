@@ -18,3 +18,11 @@
 // FROM ICE TEA GROUP LLC.
 //
 ///////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	return args.value;
+}

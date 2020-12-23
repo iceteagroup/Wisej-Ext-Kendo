@@ -19,6 +19,23 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "expandMember":
+		case "collapseMember":
+			return {
+				axis: args.axis,
+				path: args.path
+			};
+	}
+}
+
 /**
  * Changes configuration before initialization.
  */

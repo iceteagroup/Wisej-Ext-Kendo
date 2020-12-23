@@ -19,3 +19,19 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "change":
+			return this.widget.value();
+
+		case "navigate":
+			var view = this.widget.view();
+			return view.name;
+	}
+}

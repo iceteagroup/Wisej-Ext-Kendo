@@ -14,16 +14,15 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			InitializeComponent();
 
 			this.kendoScheduler1.Instance.add += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
+			this.kendoScheduler1.Instance.cancel += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
 			this.kendoScheduler1.Instance.change += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
+			this.kendoScheduler1.Instance.edit += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
+			this.kendoScheduler1.Instance.save += new WidgetEventHandler(kendoScheduler1_WidgetEvent);
 		}
 
 		private void kendoScheduler1_WidgetEvent(object sender, WidgetEventArgs e)
 		{
-			AlertBox.Show(
-					$"<b>{e.Type}</b><br/>{JSON.Stringify(e.Data)}",
-					MessageBoxIcon.Information);
 
-			Application.Play(MessageBoxIcon.Information);
 		}
 
 		private void buttonExport_Click(object sender, EventArgs e)

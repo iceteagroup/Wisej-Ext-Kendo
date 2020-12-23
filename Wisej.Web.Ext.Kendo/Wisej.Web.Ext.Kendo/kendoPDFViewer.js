@@ -19,6 +19,27 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+
+/**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "open":
+			return {
+				name: args.file.name,
+				extension: args.file.extension,
+				size: args.file.size,
+				uid: args.file.uid
+			};
+
+		case "error":
+			return e.message;
+	}
+}
+
 /**
  * Overrides default resizing functionality.
  */

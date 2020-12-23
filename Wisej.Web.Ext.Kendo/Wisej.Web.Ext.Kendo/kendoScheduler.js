@@ -20,6 +20,36 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
+ * Filters the event data for Wisej.
+ **/
+this.filterEventData = function (args) {
+
+	switch (args.type) {
+
+		case "add":
+		case "move":
+		case "save":
+		case "remove":
+			return {
+				id: args.event.id,
+				title: args.event.title,
+				description: args.event.description,
+				start: args.event.start,
+				end: args.event.end,
+				recurrenceRule: args.event.recurrenceRule,
+				startTimezone: args.event.startTimezone,
+				uid: args.event.uid
+			};
+
+		case "change":
+			return {
+				start: args.start,
+				end: args.end,
+			};
+	}
+}
+
+/**
  * Override default functionality.
  * @param {any} options The widget's configuration.
  */

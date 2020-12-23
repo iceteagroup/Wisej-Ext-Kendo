@@ -52,13 +52,11 @@
 			// 
 			// kendoDrawer1
 			// 
-			this.kendoDrawer1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
-            | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
+			this.kendoDrawer1.Anchor = Wisej.Web.AnchorStyles.None;
 			this.kendoDrawer1.Location = new System.Drawing.Point(45, 48);
 			this.kendoDrawer1.Name = "kendoDrawer1";
 			this.kendoDrawer1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoDrawer1.Options"))));
-			this.kendoDrawer1.Size = new System.Drawing.Size(362, 217);
+			this.kendoDrawer1.Size = new System.Drawing.Size(51, 217);
 			this.kendoDrawer1.TabIndex = 0;
 			this.kendoDrawer1.Text = "kendoDrawer1";
 			// 

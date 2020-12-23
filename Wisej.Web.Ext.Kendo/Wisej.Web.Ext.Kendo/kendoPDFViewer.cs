@@ -40,8 +40,8 @@ namespace Wisej.Web.Ext.Kendo
 		{
 			this.Packages.Add(new Package()
 			{
-				Name = "kendo.pdfviewer.js",
-				Source = this.GetResourceURL($"{RESOURCES_ROOT}/pdfjs/pdf.js")
+				Name = "pdf.js",
+				Source = this.GetResourceURL($"{RESOURCES_ROOT}/pdfjs/pdf.min.js")
 			});
 
 			this.WiredEvents = new[] {

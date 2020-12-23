@@ -1,4 +1,4 @@
-﻿//# sourceURL=wisej.web.ext.KendoWidget.template.js
+﻿//# sourceURL=wisej.web.ext.KendoWidget.FileManager.js
 
 ///////////////////////////////////////////////////////////////////////////////
 //

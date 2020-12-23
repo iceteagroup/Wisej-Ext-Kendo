@@ -28,7 +28,9 @@ this.filterEventData = function (args) {
 	switch (args.type) {
 
 		case "itemClick":
-			return args.item.find(".item-text").text();
-
+			return {
+				text: args.item.text(),
+				index: args.item.index()
+			};
 	}
 }
