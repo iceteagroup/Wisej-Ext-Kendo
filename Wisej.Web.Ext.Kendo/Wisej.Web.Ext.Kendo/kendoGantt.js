@@ -60,6 +60,21 @@ this.filterEventData = function (args) {
 				values: args.values
 			};
 
+		case "change":
+			var selection = this.widget.select();
+
+			if (selection) {
+				var task = this.widget.dataItem(selection);
+				if (task) {
+					return {
+						id: task.id,
+						title: task.title,
+						summary: task.summary
+					};
+				}
+			}
+			break;
+
 		case "columnResize":
 			return {
 				newWidth: args.newWidth,

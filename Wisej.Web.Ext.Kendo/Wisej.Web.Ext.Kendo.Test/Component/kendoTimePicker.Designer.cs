@@ -51,8 +51,8 @@
 			// 
 			// kendoTimePicker1
 			// 
-			this.kendoTimePicker1.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
+			this.kendoTimePicker1.Anchor = Wisej.Web.AnchorStyles.Top;
+			this.kendoTimePicker1.BorderStyle = Wisej.Web.BorderStyle.Solid;
 			this.kendoTimePicker1.Location = new System.Drawing.Point(88, 139);
 			this.kendoTimePicker1.Name = "kendoTimePicker1";
 			this.kendoTimePicker1.Size = new System.Drawing.Size(277, 35);

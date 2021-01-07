@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kendoGantt));
-			this.kendoGantt1 = new Wisej.Web.Ext.Kendo.kendoGantt();
 			this.checkBox1 = new Wisej.Web.CheckBox();
 			this.checkBox2 = new Wisej.Web.CheckBox();
 			this.checkBox3 = new Wisej.Web.CheckBox();
@@ -37,6 +36,7 @@
 			this.checkBox5 = new Wisej.Web.CheckBox();
 			this.numericUpDown1 = new Wisej.Web.NumericUpDown();
 			this.buttonPDF = new Wisej.Web.Button();
+			this.kendoGantt1 = new Wisej.Web.Ext.Kendo.kendoGantt();
 			this.panel.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -82,19 +82,6 @@
 			// linkDocs
 			// 
 			this.linkDocs.Text = "https://docs.telerik.com/kendo-ui/controls/scheduling/gantt/overview";
-			// 
-			// kendoGantt1
-			// 
-			this.kendoGantt1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
-            | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
-			this.kendoGantt1.Location = new System.Drawing.Point(23, 21);
-			this.kendoGantt1.Name = "kendoGantt1";
-			this.kendoGantt1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoGantt1.Options"))));
-			this.kendoGantt1.Size = new System.Drawing.Size(406, 510);
-			this.kendoGantt1.TabIndex = 0;
-			this.kendoGantt1.Text = "kendoGantt1";
-			this.kendoGantt1.WebRequest += new Wisej.Web.WebRequestHandler(this.kendoGantt1_WebRequest);
 			// 
 			// checkBox1
 			// 
@@ -189,6 +176,20 @@
 			this.buttonPDF.Size = new System.Drawing.Size(42, 42);
 			this.buttonPDF.TabIndex = 13;
 			this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
+			// 
+			// kendoGantt1
+			// 
+			this.kendoGantt1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
+            | Wisej.Web.AnchorStyles.Left) 
+            | Wisej.Web.AnchorStyles.Right)));
+			this.kendoGantt1.Location = new System.Drawing.Point(23, 21);
+			this.kendoGantt1.Name = "kendoGantt1";
+			this.kendoGantt1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoGantt1.Options"))));
+			this.kendoGantt1.Size = new System.Drawing.Size(406, 510);
+			this.kendoGantt1.TabIndex = 0;
+			this.kendoGantt1.Text = "kendoGantt1";
+			this.kendoGantt1.WebRequest += new Wisej.Web.WebRequestHandler(this.kendoGantt1_WebRequest);
+			this.kendoGantt1.WidgetEvent += new Wisej.Web.WidgetEventHandler(this.kendoGantt1_WidgetEvent);
 			// 
 			// kendoGantt
 			// 

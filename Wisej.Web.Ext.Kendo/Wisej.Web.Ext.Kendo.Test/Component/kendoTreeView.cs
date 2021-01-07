@@ -11,6 +11,8 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 			this.kendoTreeView1.Instance.change += new WidgetEventHandler(kendoTreeView1_WidgetEvent);
 			this.kendoTreeView1.Instance.check += new WidgetEventHandler(kendoTreeView1_WidgetEvent);
+			this.kendoTreeView1.Instance.select += new WidgetEventHandler(kendoTreeView1_WidgetEvent);
+
 		}
 
 		private void kendoTreeView1_WidgetEvent(object sender, WidgetEventArgs e)

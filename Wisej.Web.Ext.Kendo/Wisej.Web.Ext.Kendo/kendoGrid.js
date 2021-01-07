@@ -42,6 +42,11 @@ this.filterOptions = function (options) {
 		}
 	}
 
+	// remove the event handler or it will create a hierarchical column.
+	if (!options.detailTemplate) {
+		options.detailInit = null;
+	}
+
 	var columns = options.columns;
 	if (columns) {
 		for (i = 0; i < columns.length; i++) {

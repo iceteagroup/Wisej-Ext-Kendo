@@ -11,9 +11,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoDiagram1.Instance.add += new WidgetEventHandler(kendoDiagram1_WidgetEvent);
 			this.kendoDiagram1.Instance.click += new WidgetEventHandler(kendoDiagram1_WidgetEvent);
-			this.kendoDiagram1.Instance.select += new WidgetEventHandler(kendoDiagram1_WidgetEvent);
 		}
 
 		private void kendoDiagram1_WidgetEvent(object sender, WidgetEventArgs e)

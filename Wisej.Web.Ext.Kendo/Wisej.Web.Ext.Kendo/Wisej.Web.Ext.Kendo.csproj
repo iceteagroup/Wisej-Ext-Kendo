@@ -685,9 +685,9 @@
     <EmbeddedResource Include="kendoQRCode.js">
       <DependentUpon>kendoQRCode.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="kendoRating.js">
+    <EmbeddedResource Include="kendoRating.js">
       <DependentUpon>kendoRating.cs</DependentUpon>
-    </Content>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kendo\js\jszip.min.js" />
     <EmbeddedResource Include="Kendo\styles\fonts\glyphs\KendoUIGlyphs.svg" />
     <EmbeddedResource Include="Kendo\styles\fonts\glyphs\WebComponentsIcons.svg" />

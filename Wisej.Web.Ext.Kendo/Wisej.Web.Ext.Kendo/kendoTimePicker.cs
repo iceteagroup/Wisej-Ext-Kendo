@@ -35,7 +35,7 @@ namespace Wisej.Web.Ext.Kendo
 		/// Constructs a new instance of the <see cref="kendoTimePicker"/> class.
 		/// </summary>
 		/// <param name="options">Initial set of options.</param>
-		public kendoTimePicker(object options) : base("kendoTimePicker", "<input style='width:100%;height:100%;'>", options)
+		public kendoTimePicker(object options) : base("kendoTimePicker", "<input style='width:100%;'>", options)
 		{
 			this.WiredEvents = new[] {
 				"change",

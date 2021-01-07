@@ -49,6 +49,12 @@
     <Content Include="Data\Gantt\tasks.json" />
     <Content Include="Data\Gantt\dependencies.json" />
     <Content Include="Data\PDFViewer\wisej.pdf" />
+    <EmbeddedResource Include="Data\TreeList\Employees.json" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Data\Grid\ProductDetails.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -59,26 +65,93 @@
   <ItemGroup>
     <Content Include="Images\Chat\ANATR.jpg" />
     <Content Include="Images\Chat\ANTON.jpg" />
-    <Content Include="Images\Grid\ALFKI.jpg" />
-    <Content Include="Images\Grid\ANATR.jpg" />
-    <Content Include="Images\Grid\ANTON.jpg" />
-    <Content Include="Images\Grid\AROUT.jpg" />
-    <Content Include="Images\Grid\BERGS.jpg" />
-    <Content Include="Images\Grid\BLAUS.jpg" />
-    <Content Include="Images\Grid\BLONP.jpg" />
-    <Content Include="Images\Grid\BOLID.jpg" />
-    <Content Include="Images\Grid\BONAP.jpg" />
-    <Content Include="Images\Grid\BOTTM.jpg" />
-    <Content Include="Images\Grid\BSBEV.jpg" />
-    <Content Include="Images\Grid\CACTU.jpg" />
-    <Content Include="Images\Grid\CENTC.jpg" />
-    <Content Include="Images\Grid\CHOPS.jpg" />
-    <Content Include="Images\Grid\COMMI.jpg" />
-    <Content Include="Images\Grid\CONSH.jpg" />
-    <Content Include="Images\Grid\DRACD.jpg" />
-    <Content Include="Images\Grid\DUMON.jpg" />
-    <Content Include="Images\Grid\EASTC.jpg" />
-    <Content Include="Images\Grid\ERNSH.jpg" />
+    <Content Include="Images\DropDownList\1.jpg" />
+    <Content Include="Images\DropDownList\2.jpg" />
+    <Content Include="Images\DropDownList\3.jpg" />
+    <Content Include="Images\DropDownList\4.jpg" />
+    <Content Include="Images\DropDownList\5.jpg" />
+    <Content Include="Images\DropDownList\6.jpg" />
+    <Content Include="Images\DropDownList\7.jpg" />
+    <Content Include="Images\DropDownList\8.jpg" />
+    <Content Include="Images\DropDownList\black-cap.png" />
+    <Content Include="Images\DropDownList\cap.png" />
+    <Content Include="Images\DropDownList\gray-cap.png" />
+    <Content Include="Images\DropDownList\orange-cap.png" />
+    <Content Include="Images\Grid\Country-Flags\bg.png" />
+    <Content Include="Images\Grid\Country-Flags\br.png" />
+    <Content Include="Images\Grid\Country-Flags\fr.png" />
+    <Content Include="Images\Grid\Country-Flags\gb.png" />
+    <Content Include="Images\Grid\Country-Flags\in.png" />
+    <Content Include="Images\Grid\Country-Flags\it.png" />
+    <Content Include="Images\Grid\Foods\1.jpg" />
+    <Content Include="Images\Grid\Foods\10.jpg" />
+    <Content Include="Images\Grid\Foods\11.jpg" />
+    <Content Include="Images\Grid\Foods\12.jpg" />
+    <Content Include="Images\Grid\Foods\13.jpg" />
+    <Content Include="Images\Grid\Foods\14.jpg" />
+    <Content Include="Images\Grid\Foods\15.jpg" />
+    <Content Include="Images\Grid\Foods\16.jpg" />
+    <Content Include="Images\Grid\Foods\17.jpg" />
+    <Content Include="Images\Grid\Foods\18.jpg" />
+    <Content Include="Images\Grid\Foods\19.jpg" />
+    <Content Include="Images\Grid\Foods\2.jpg" />
+    <Content Include="Images\Grid\Foods\20.jpg" />
+    <Content Include="Images\Grid\Foods\21.jpg" />
+    <Content Include="Images\Grid\Foods\22.jpg" />
+    <Content Include="Images\Grid\Foods\23.jpg" />
+    <Content Include="Images\Grid\Foods\24.jpg" />
+    <Content Include="Images\Grid\Foods\25.jpg" />
+    <Content Include="Images\Grid\Foods\26.jpg" />
+    <Content Include="Images\Grid\Foods\27.jpg" />
+    <Content Include="Images\Grid\Foods\28.jpg" />
+    <Content Include="Images\Grid\Foods\29.jpg" />
+    <Content Include="Images\Grid\Foods\3.jpg" />
+    <Content Include="Images\Grid\Foods\30.jpg" />
+    <Content Include="Images\Grid\Foods\31.jpg" />
+    <Content Include="Images\Grid\Foods\32.jpg" />
+    <Content Include="Images\Grid\Foods\33.jpg" />
+    <Content Include="Images\Grid\Foods\34.jpg" />
+    <Content Include="Images\Grid\Foods\35.jpg" />
+    <Content Include="Images\Grid\Foods\38.jpg" />
+    <Content Include="Images\Grid\Foods\39.jpg" />
+    <Content Include="Images\Grid\Foods\4.jpg" />
+    <Content Include="Images\Grid\Foods\42.jpg" />
+    <Content Include="Images\Grid\Foods\43.jpg" />
+    <Content Include="Images\Grid\Foods\44.jpg" />
+    <Content Include="Images\Grid\Foods\47.jpg" />
+    <Content Include="Images\Grid\Foods\48.jpg" />
+    <Content Include="Images\Grid\Foods\49.jpg" />
+    <Content Include="Images\Grid\Foods\5.jpg" />
+    <Content Include="Images\Grid\Foods\50.jpg" />
+    <Content Include="Images\Grid\Foods\51.jpg" />
+    <Content Include="Images\Grid\Foods\52.jpg" />
+    <Content Include="Images\Grid\Foods\53.jpg" />
+    <Content Include="Images\Grid\Foods\54.jpg" />
+    <Content Include="Images\Grid\Foods\55.jpg" />
+    <Content Include="Images\Grid\Foods\56.jpg" />
+    <Content Include="Images\Grid\Foods\57.jpg" />
+    <Content Include="Images\Grid\Foods\59.jpg" />
+    <Content Include="Images\Grid\Foods\6.jpg" />
+    <Content Include="Images\Grid\Foods\60.jpg" />
+    <Content Include="Images\Grid\Foods\61.jpg" />
+    <Content Include="Images\Grid\Foods\62.jpg" />
+    <Content Include="Images\Grid\Foods\63.jpg" />
+    <Content Include="Images\Grid\Foods\64.jpg" />
+    <Content Include="Images\Grid\Foods\65.jpg" />
+    <Content Include="Images\Grid\Foods\66.jpg" />
+    <Content Include="Images\Grid\Foods\67.jpg" />
+    <Content Include="Images\Grid\Foods\68.jpg" />
+    <Content Include="Images\Grid\Foods\69.jpg" />
+    <Content Include="Images\Grid\Foods\7.jpg" />
+    <Content Include="Images\Grid\Foods\70.jpg" />
+    <Content Include="Images\Grid\Foods\71.jpg" />
+    <Content Include="Images\Grid\Foods\72.jpg" />
+    <Content Include="Images\Grid\Foods\74.jpg" />
+    <Content Include="Images\Grid\Foods\75.jpg" />
+    <Content Include="Images\Grid\Foods\76.jpg" />
+    <Content Include="Images\Grid\Foods\77.jpg" />
+    <Content Include="Images\Grid\Foods\8.jpg" />
+    <Content Include="Images\Grid\Foods\9.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -360,8 +433,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\TreeList\" />
     <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>
@@ -377,7 +456,7 @@
     </Reference>
     <Reference Include="Wisej.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=17bef35e11b84171, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Releases\2.2\2.2.8\bin\Wisej.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\Development\2.2\bin\Wisej.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Wisej.Web.Ext.Kendo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -539,7 +618,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63733/</IISUrl>
+          <IISUrl>http://localhost:43733/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

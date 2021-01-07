@@ -1,5 +1,4 @@
 ﻿using System;
-using Wisej.Web;
 
 namespace Wisej.Web.Ext.Kendo.Test.Component
 {
@@ -9,9 +8,10 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoFileManager1.Instance.navigate += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
+			this.kendoFileManager1.Instance.open += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
 			this.kendoFileManager1.Instance.select += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
 			this.kendoFileManager1.Instance.execute += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
+			this.kendoFileManager1.Instance.navigate += new WidgetEventHandler(kendoFileManager1_WidgetEvent);
 		}
 
 		private void kendoFileManager1_WidgetEvent(object sender, WidgetEventArgs e)

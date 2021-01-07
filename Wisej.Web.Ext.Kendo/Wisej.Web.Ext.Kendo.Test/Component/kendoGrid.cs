@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Net.Mime;
 using System.Web;
+using Wisej.Core;
 
 namespace Wisej.Web.Ext.Kendo.Test.Component
 {
@@ -14,7 +15,7 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 
 			this.kendoGrid1.Instance.edit += new WidgetEventHandler(kendoGrid1_WidgetEvent);
 			this.kendoGrid1.Instance.navigate += new WidgetEventHandler(kendoGrid1_WidgetEvent);
-		}
+			this.kendoGrid1.Instance.dataBound += new WidgetEventHandler(kendoGrid1_DataBound);		}
 
 		private void kendoGrid1_WidgetEvent(object sender, WidgetEventArgs e)
 		{
@@ -23,6 +24,11 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 					MessageBoxIcon.Information);
 
 			Application.Play(MessageBoxIcon.Information);
+		}
+
+		private void kendoGrid1_DataBound(object sender, WidgetEventArgs e)
+		{
+			this.kendoGrid1.Call("onDataBound");
 		}
 
 		private void buttonPDF_Click(object sender, EventArgs e)
@@ -61,6 +67,84 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 			this.kendoGrid1.Options.persistSelection = this.checkBox4.Checked;
 
 			this.kendoGrid1.Update();
+		}
+
+		private void kendoGrid_Load(object sender, EventArgs e)
+		{
+			this.kendoGrid1.Options.dataSource = new { 
+				data = LoadProducts(),
+				pageSize = 20,
+				aggregate = new[] {
+					new {
+						field = "TotalSales",
+						aggregate = "sum"
+					}
+				},
+				group = new {
+					field = "Category.CategoryName",
+					dir = "desc",
+					aggregates = new[] {
+						new {
+							field = "TotalSales",
+							aggregate = "sum"
+						}
+					}
+				},
+				schema = new { 
+					model = new {
+						id = "ProductID",
+						fields = new {
+							ProductID = new { 
+								editable = false,
+								nullable = true
+							},
+							Discontinued = new {
+								type = "boolean",
+								editable = false,
+							},
+							TotalSales = new {
+								type = "number",
+								editable = false
+							},
+							TargetSales = new {
+								type = "number",
+								editable = false
+							},
+							LastSupply = new {
+								type = "date"
+							},
+							UnitPrice = new {
+								type = "number"
+							},
+							UnitsInStock = new {
+								type = "number"
+							},
+							Category = new {
+								defaultValue = new {
+									CategoryID = 8,
+									CategoryName = "Seafood"
+								}
+							},
+							Country = new {
+								defaultValue = new {
+									CountryNameLong = "Bulgaria",
+									CountryNameShort = "bg"
+								}
+							}
+						}
+					}
+				}
+			};
+		}
+
+		private DynamicObject[] LoadProducts()
+		{
+			using (StreamReader reader = new StreamReader(Application.MapPath("Data/Grid/ProductDetails.json"), detectEncodingFromByteOrderMarks: true))
+			{
+				var data = JSON.Parse(reader.BaseStream).products;
+
+				return data;
+			}
 		}
 	}
 }

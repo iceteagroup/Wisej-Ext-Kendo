@@ -51,11 +51,10 @@
 			// 
 			// kendoDateRangePicker1
 			// 
-			this.kendoDateRangePicker1.Anchor = ((Wisej.Web.AnchorStyles)(((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
-			this.kendoDateRangePicker1.Location = new System.Drawing.Point(115, 84);
+			this.kendoDateRangePicker1.Anchor = Wisej.Web.AnchorStyles.Top;
+			this.kendoDateRangePicker1.Location = new System.Drawing.Point(63, 131);
 			this.kendoDateRangePicker1.Name = "kendoDateRangePicker1";
-			this.kendoDateRangePicker1.Size = new System.Drawing.Size(223, 144);
+			this.kendoDateRangePicker1.Size = new System.Drawing.Size(327, 51);
 			this.kendoDateRangePicker1.TabIndex = 0;
 			this.kendoDateRangePicker1.Text = "kendoDateRangePicker1";
 			// 

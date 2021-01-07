@@ -31,10 +31,12 @@ this.filterEventData = function (args) {
 			return args.path;
 
 		case "select":
-			return args.entries;
+			var entries = [];
+			args.entries.forEach(function (e) { entries.push(e.id); }, this);
+			return entries;
 
 		case "open":
-			return args.entry;
+			return args.entry.id;
 
 		case "execute":
 			return {

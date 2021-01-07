@@ -28,6 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kendoTreeList));
+			Wisej.Web.Ext.Kendo.kendoBase.WidgetTemplate widgetTemplate1 = new Wisej.Web.Ext.Kendo.kendoBase.WidgetTemplate();
 			this.kendoTreeList1 = new Wisej.Web.Ext.Kendo.kendoTreeList();
 			this.panel.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -51,18 +53,25 @@
 			// 
 			// kendoTreeList1
 			// 
-			this.kendoTreeList1.Anchor = ((Wisej.Web.AnchorStyles)((((Wisej.Web.AnchorStyles.Top | Wisej.Web.AnchorStyles.Bottom) 
-            | Wisej.Web.AnchorStyles.Left) 
-            | Wisej.Web.AnchorStyles.Right)));
-			this.kendoTreeList1.Location = new System.Drawing.Point(27, 38);
+			this.kendoTreeList1.Dock = Wisej.Web.DockStyle.Fill;
+			this.kendoTreeList1.Location = new System.Drawing.Point(8, 8);
 			this.kendoTreeList1.Name = "kendoTreeList1";
-			this.kendoTreeList1.Size = new System.Drawing.Size(398, 236);
+			this.kendoTreeList1.Options = ((Wisej.Core.DynamicObject)(Wisej.Core.WisejSerializer.Parse(resources.GetString("kendoTreeList1.Options"))));
+			this.kendoTreeList1.Size = new System.Drawing.Size(437, 297);
 			this.kendoTreeList1.TabIndex = 0;
 			this.kendoTreeList1.Text = "kendoTreeList1";
+			widgetTemplate1.Id = "photo-template";
+			widgetTemplate1.Template = "<div class=\'employee-photo\'\r\n                style=\'background-image: url(../Imag" +
+    "es/TreeList/#:data.EmployeeID#.jpg);\'></div>\r\n           <div class=\'employee-na" +
+    "me\'>#: FirstName #</div>";
+			widgetTemplate1.Type = "text/x-kendo-template";
+			this.kendoTreeList1.WidgetTemplates = new Wisej.Web.Ext.Kendo.kendoBase.WidgetTemplate[] {
+        widgetTemplate1};
 			// 
 			// kendoTreeList
 			// 
 			this.Name = "kendoTreeList";
+			this.Load += new System.EventHandler(this.kendoTreeList_Load);
 			this.panel.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);

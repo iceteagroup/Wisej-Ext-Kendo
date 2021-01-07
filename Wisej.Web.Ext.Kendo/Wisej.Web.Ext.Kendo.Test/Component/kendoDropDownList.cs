@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Wisej.Web.Ext.Kendo.Test.Component
 {
@@ -8,27 +9,44 @@ namespace Wisej.Web.Ext.Kendo.Test.Component
 		{
 			InitializeComponent();
 
-			this.kendoDropDownList1.Instance.change += new WidgetEventHandler(kendoDropDownList1_WidgetEvent);
-			this.kendoDropDownList1.Instance.select += new WidgetEventHandler(kendoDropDownList1_WidgetEvent);
-		}
-
-		private void kendoDropDownList1_WidgetEvent(object sender, WidgetEventArgs e)
-		{
-			AlertBox.Show(
-					$"<b>{e.Type}</b><br/>{JSON.Stringify(e.Data)}",
-					MessageBoxIcon.Information);
-
-			Application.Play(MessageBoxIcon.Information);
+			this.kendoDropDownListColor.Instance.change += new WidgetEventHandler(kendoDropDownListColor_WidgetEvent);
 		}
 
 		private void kendoDropDownList_Load(object sender, EventArgs e)
 		{
-			this.kendoDropDownList1.Options.dataSource = new[] {
-				new { name = "Apples" },
-				new { name = "Oranges" }
+			// color picker.
+			this.kendoDropDownListColor.Options.dataSource = new[] {
+				new {
+					Color = "Orange",
+					Value = "orange-cap.png",
+				},
+				new {
+					Color = "Black",
+					Value = "black-cap.png",
+				},
+				new {
+					Color = "Gray",
+					Value = "gray-cap.png",
+				},
 			};
-			this.kendoDropDownList1.Options.dataTextField = "name";
-			this.kendoDropDownList1.Options.dataValueField = "name";
+			this.kendoDropDownListColor.Options.value = "orange-cap.png";
+			this.kendoDropDownListColor.Options.dataTextField = "Color";
+			this.kendoDropDownListColor.Options.dataValueField = "Value";
+
+			// size picker.
+			this.kendoDropDownListSize.Options.dataSource = new[] {
+				"Small",
+				"Medium",
+				"Large",
+				"Extra Large"
+			};
+			this.kendoDropDownListSize.Options.value = "Small";
+		}
+
+		private void kendoDropDownListColor_WidgetEvent(object sender, WidgetEventArgs e)
+		{
+			if (!String.IsNullOrEmpty(e.Data))
+				this.pictureBox1.Image = Image.FromFile(Application.MapPath($"Images/DropDownList/{e.Data}"));
 		}
 	}
 }
